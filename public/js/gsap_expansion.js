@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // markers: true,
     pinSpacing: false,
     scrub: 1,
-    //toggleClass: { targets: ".section", className: "active" }
   });
   
   gsap.utils.toArray(".timeline_section").forEach((tSection) => {

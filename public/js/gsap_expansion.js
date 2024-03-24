@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       end: '+=3000px',
       pin: '.reviews-section',
       scrub: true,
-      markers: true,
+      // markers: true,
     }
   })
 });

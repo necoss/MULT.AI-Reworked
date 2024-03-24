@@ -72,6 +72,9 @@ body ul {
   cursor: pointer;
   margin-right: 50px;
 }
+.m-header .header-navigation .navigation_right .playing {
+  background: var(--color-text-accent);
+}
 .m-header .header-navigation .navigation_right .navigation-right__contacts {
   border-radius: 44px;
   background: var(--color-text-black);

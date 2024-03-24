@@ -19,15 +19,3 @@ function playAudio(){
 }
 
 playAudio();
-
-// MENU
-
-// function menuBurgerButtonAnimation() {
-//   const burgerButton = document.querySelector('#nav-icon3')
-
-//   burgerButton.addEventListener('click', () => {
-//     burgerButton.classList.toggle('open')
-//   })
-// }
-
-// menuBurgerButtonAnimation()

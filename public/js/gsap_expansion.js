@@ -59,20 +59,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   //* Episodes Preview Block Transition
-  const episodesPreviewBlock = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".episodes_transition-screen",
-      scrub: true,
-      //   pin: true,
-      // markers: true,
-      start: "35% 50%",
-      end: "+=300px",
-    },
-  }).to(".episodes_transition-screen", {
-    scale: 4,
-    ease: "none",
-    borderRadius: "0%"
-  });
+  const episodesPreviewBlock = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".episodes_transition-screen",
+        scrub: true,
+        //   pin: true,
+        // markers: true,
+        start: "35% 50%",
+        end: "+=300px",
+      },
+    })
+    .to(".episodes_transition-screen", {
+      scale: 4,
+      ease: "none",
+      borderRadius: "0%",
+    });
 
   //* Pin Series section
   const pinSeriesSection = gsap.timeline({
@@ -84,18 +86,48 @@ document.addEventListener("DOMContentLoaded", (event) => {
       start: "top top",
       end: "+=100px",
     },
-  })
+  });
 
   //* Horizontal Reviews Block Animation
-  gsap.to('.reviews-section', {
+  gsap.to(".reviews-section", {
     xPercent: -100,
     scrollTrigger: {
-      trigger: '.reviews-section',
-      start: 'top top',
-      end: '+=3000px',
-      pin: '.reviews-section',
+      trigger: ".reviews-section",
+      start: "top top",
+      end: "+=3000px",
+      pin: ".reviews-section",
       scrub: true,
       // markers: true,
-    }
-  })
+    },
+  });
+
+  //* Timeline Section
+  const sectionWrap = document.querySelector(".timeline");
+
+  ScrollTrigger.create({
+    trigger: ".timeline_line_line-inner_ball",
+    start: "top 35%",
+
+    endTrigger: ".timeline", // outside timeline
+    end: "bottom-=24px 35%", //The end point must be the bottom point of the timeline !!! bottom-=24px 35% 
+
+    pin: true,
+    // markers: true,
+    pinSpacing: false,
+    scrub: 1,
+    //toggleClass: { targets: ".section", className: "active" }
+  });
+  
+  gsap.utils.toArray(".timeline_section").forEach((tSection) => {
+    const timelineSection = gsap.timeline({
+      scrollTrigger: {
+        trigger: tSection,
+        start: "+=30px 35%",
+        end: "+=35%",
+        toggleClass: "active",
+        markers: true,
+        // pin: true,
+      },
+    });
+  });
 });

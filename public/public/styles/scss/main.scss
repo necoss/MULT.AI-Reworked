@@ -280,6 +280,7 @@ body {
 }
 
 .m-main {
+  // TEST
 
   // Hero Section
   .hero-section {
@@ -299,10 +300,21 @@ body {
     .hero_big-pic {
       margin-top: 25px;
       height: calc(var(--index) * 65);
-      flex-shrink: 0;
-      border-radius: 20px;
-      background: var(--color-text-black);
-      box-shadow: 0px 4px 12.5px 1px rgba(0, 0, 0, 0.25);
+      // flex-shrink: 0;
+      // border-radius: 20px;
+      // background: var(--color-text-black);
+
+      // width: 100%;
+      position: relative;
+
+      .hero_big-pic_video {
+        position: absolute;
+        width: 100%;
+        height: calc(var(--index) * 65);
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0px 4px 12.5px 1px rgba(0, 0, 0, 0.25);
+      }
     }
 
     .hero_scrolldown {
@@ -345,6 +357,7 @@ body {
 
   // Problems Section
   .problems-section {
+    padding-top: 600px;
     position: relative;
     background: var(--color-text-black);
     border-radius: 0 0 30px 30px;
@@ -563,7 +576,7 @@ body {
 
           &.active {
             .timeline_content {
-              transition: .4s ease-in-out;
+              transition: 0.4s ease-in-out;
               opacity: 1;
 
               .content-mult_title {
@@ -581,36 +594,41 @@ body {
 
             border-radius: 20px;
 
-            .content_section{
+            .content_section {
               width: 450px;
-              
-              &:not(:last-child){
+
+              &:not(:last-child) {
                 margin-right: 50px;
               }
-              
+
               .content-mult_title {
                 color: var(--color-text-black);
                 transition: 0.6s ease;
-                font-size: 26px;
+                font-size: 30px;
                 background-color: var(--color-text-white);
+                text-align: center;
+                text-transform: uppercase;
               }
 
-              .timeline_paragraph{
+              .timeline_paragraph {
                 // text-align: start;
                 color: var(--color-text-white);
                 padding: 20px 10px;
-                background: var(--color-default-black);
-                border-radius: 0 15px 15px 15px;
+                background: rgba(38, 38, 38, 0.74);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(38, 38, 38, 0.35);
+                border-radius: 15px;
                 font-size: 16px;
-                height: calc(var(--index) *20);
+                height: calc(var(--index) * 20);
               }
             }
 
 
           }
-
         }
-
       }
     }
   }
@@ -813,7 +831,7 @@ body {
       }
 
       .seasons_series_all_active {
-        transition: .4s ease;
+        transition: 0.4s ease;
 
         &:hover {
           .seasons_series_all_preview {
@@ -1034,8 +1052,6 @@ body {
           margin-top: 32px;
         }
       }
-
-
     }
   }
 }

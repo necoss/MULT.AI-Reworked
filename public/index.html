@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MULT.AI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./public/styles/css/main.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SWIPER CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- LORD ICON -->
+    <script src="https://cdn.lordicon.com/lordicon.js" defer></script>
+
+    <!-- LENIS SCROLL -->
+    <script
+      src="https://unpkg.com/@studio-freight/lenis@1.0.40/dist/lenis.min.js"
+      defer
+    ></script>
+
+    <!-- GSAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"
+      defer
+    ></script>
+
+    <!-- LOCAL -->
+    <script src="./public/js/gsap_expansion.js" defer></script>
+    <script src="./public/js/index.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header m-header container">
+      <div class="header-navigation">
+        <a href="index.html" class="navigation_logo">MULT.AI</a>
+
+        <ul class="navigation_right">
+          <li>
+            <button class="navigation-right__music-button">
+              <lord-icon
+                class="navigation_music-icon"
+                src="https://cdn.lordicon.com/ktsahwvc.json"
+                trigger="loop"
+                state="loop-jab"
+                style="width: 26px; height: 26px"
+              >
+              </lord-icon>
+              <audio
+                class="navigation_music"
+                src="./public/media/music/0320 Free Fall.mp3"
+                loop
+              ></audio>
+            </button>
+          </li>
+
+          <li><a href="#" class="navigation-right__contacts">Контакты</a></li>
+
+          <!-- <li>
+            <button class="navigation-right__menu-button">
+              <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </li> -->
+
+          <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="nav-toggle" />
+            <label for="nav-toggle" class="navigation__button">
+              <span
+                class="navigation__icon"
+                aria-label="toggle navigation menu"
+              ></span>
+            </label>
+            <div class="navigation__background"></div>
+  
+            <nav class="navigation__nav" role="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link"><span>01.</span>Главная</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link"
+                    ><span>02.</span>Проблема</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link"
+                    ><span>03.</span>Мультики</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link"><span>04.</span>Отзывы</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link"><span>05</span>Прайс</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </ul>
+
+ 
+      </div>
+    </header>
+
+    <main class="main m-main">
+      <!-- Hero Section -->
+      <section class="hero-section container">
+        <h1 class="hero_title">погрузитесь в мир mult.ai</h1>
+        <div class="hero_big-pic"></div>
+        <div class="hero_scrolldown">
+          <p class="hero_scrolldown_plus">+</p>
+          <p class="hero_scrolldown_plus">+</p>
+          <p class="hero_scrolldown_text">СКРОЛЛЬТЕ ВНИЗ</p>
+          <p class="hero_scrolldown_plus">+</p>
+          <p class="hero_scrolldown_plus">+</p>
+        </div>
+      </section>
+
+      <!-- Problems Section -->
+      <section class="problems-section">
+        <div class="container problems-container">
+          <h2 class="problems_title">
+            У Вас возникали когда-нибудь такие мысли:
+          </h2>
+          <!-- <p class="problems_paragpagh">Мы уверены, каждый родитель сталкивался с такими проблемами</p> -->
+
+          <div class="problems_slider">
+            <div class="problems-slider_wrapper">
+              <div class="problems-slider_slide">
+                <div class="problems-slider_comment">
+                  <img
+                    class="problems-slider_image"
+                    src="./public/media/img/people/woman1.png"
+                    alt=""
+                  />
+                  <p class="problems-slider_comment_text">
+                    Я Лера, и я очень устаю смотреть ребенка 24/7/365.
+                  </p>
+                  <div class="problems-slider_comment_circle"></div>
+                  <div class="problems-slider_comment_circle2"></div>
+                </div>
+              </div>
+
+              <div class="problems-slider_slide">
+                <div class="problems-slider_comment">
+                  <img
+                    class="problems-slider_image"
+                    src="./public/media/img/people/woman1.png"
+                    alt=""
+                  />
+                  <p class="problems-slider_comment_text">
+                    Я Катя, и я сильно переживаю, что недостаточно развиваю
+                    ребенка.
+                  </p>
+                  <div class="problems-slider_comment_circle"></div>
+                  <div class="problems-slider_comment_circle2"></div>
+                </div>
+              </div>
+
+              <div class="problems-slider_slide">
+                <div class="problems-slider_comment">
+                  <img
+                    class="problems-slider_image"
+                    src="./public/media/img/people/woman1.png"
+                    alt=""
+                  />
+                  <p class="problems-slider_comment_text">
+                    Я Соня, и я не знаю, что смотрит мой ребенок.
+                  </p>
+                  <div class="problems-slider_comment_circle"></div>
+                  <div class="problems-slider_comment_circle2"></div>
+                </div>
+              </div>
+
+              <div class="problems-slider_slide">
+                <div class="problems-slider_comment">
+                  <img
+                    class="problems-slider_image"
+                    src="./public/media/img/people/woman1.png"
+                    alt=""
+                  />
+                  <p class="problems-slider_comment_text">
+                    Я Карина, и меня напрягает что мой ребенок бездумно залипает
+                    в телефоне.
+                  </p>
+                  <div class="problems-slider_comment_circle"></div>
+                  <div class="problems-slider_comment_circle2"></div>
+                </div>
+              </div>
+
+              <div class="problems-slider_slide">
+                <div class="problems-slider_comment">
+                  <img
+                    class="problems-slider_image"
+                    src="./public/media/img/people/woman1.png"
+                    alt=""
+                  />
+                  <p class="problems-slider_comment_text">
+                    Я Ева. Мне тяжело научить чему-то ребенка. Я хочу чтобы он
+                    сфокусировался и получал удовольствие от процесса.
+                  </p>
+                  <div class="problems-slider_comment_circle"></div>
+                  <div class="problems-slider_comment_circle2"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Addiction Section -->
+      <section class="addiction-section container">
+        <h3 class="addiction_title">
+          У маленьких детей очень быстро развивается дофаминовая зависимость от
+          развлекательного контента!
+        </h3>
+        <p class="addiction_paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cum.
+        </p>
+
+        <article class="addiction-article_textblock">
+          <p class="addiction-article_text">До ютуба</p>
+          <p class="addiction-article_text">После ютуба</p>
+        </article>
+
+        <div class="addiction_video"></div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section class="timeline-section container">
+        <h4 class="timeline_title">Сделайте правильный выбор!</h4>
+        <p class="timeline_paragraph">
+          Расставьте свои приоритеты в воспитании ребенка правильно! Дайте ему
+          максимум в развитии
+        </p>
+
+        <div class="timeline_graph"></div>
+      </section>
+
+      <!-- Episodes Section -->
+      <section class="episodes-section container">
+        <h5 class="episodes_title">
+          Отправляйтесь в путешествие с любимыми героями!
+        </h5>
+        <p class="episodes_subtitle">
+          Какой-то супер красивый текст, который будет описывать концепцию
+          мультиков, что и как нужно смотреть
+        </p>
+        <div class="episodes_transition-screen"></div>
+      </section>
+
+      <!-- Seasons Section -->
+      <section class="seasons-section">
+        <h6 class="seasons_title">НАША КОЛЛЕКЦИЯ</h6>
+
+        <div class="seasons_series">
+          <div class="seasons_series_1 seasons_series_all">
+            <img
+              class="seasons_series_all_logo"
+              src="./public/media/img/icons/series_icons/first-ico_apple.svg"
+              alt="Apple icon"
+            />
+            <h6 class="seasons_series_all_title">Элли в стране чудес</h6>
+            <p class="seasons_series_all_paragraph">
+              Та та та, суперское описание предстоящей истории. Лорем ипсуп чар
+              та та та та та т ат ат а. Та та та, суперское описание предстоящей
+              истории. Лорем ипсуп чар та та та та та т ат ат а. Та та та,
+              суперское описание предстоящей истории. Лорем ипсуп чар та та та
+              та та т ат ат а. Та та та, суперское описание предстоящей истории.
+              Лорем ипсуп чар та та та та та т ат ат а
+            </p>
+            <button class="seasons_series_all_play">
+              <img src="./public/media/img/icons/play.svg" alt="Play Button" />
+            </button>
+            <p class="seasons_series_all_number">01</p>
+
+            <!-- <hr class="seasons_series_all_hr1">
+            <hr class="seasons_series_all_hr2"> -->
+          </div>
+
+          <div class="seasons_series_2 seasons_series_all">
+            <img
+              class="seasons_series_all_logo"
+              src="./public/media/img/icons/series_icons/sec-ico_castle.svg"
+              alt="Apple icon"
+            />
+            <p class="seasons_series_all_number">02</p>
+          </div>
+
+          <div class="seasons_series_3 seasons_series_all">
+            <img
+              class="seasons_series_all_logo"
+              src="./public/media/img/icons/series_icons/third-ico_forest.svg"
+              alt="Apple icon"
+            />
+            <p class="seasons_series_all_number">03</p>
+          </div>
+
+          <div class="seasons_series_4 seasons_series_all">
+            <img
+              class="seasons_series_all_logo"
+              src="./public/media/img/icons/series_icons/forth-ico_kitty.svg"
+              alt="Apple icon"
+            />
+            <p class="seasons_series_all_number">04</p>
+          </div>
+
+          <div class="seasons_series_5 seasons_series_all">
+            <img
+              class="seasons_series_all_logo"
+              src="./public/media/img/icons/series_icons/fifth-ico_love.svg"
+              alt="Apple icon"
+            />
+            <p class="seasons_series_all_number">05</p>
+          </div>
+        </div>
+      </section>
+      <section class="game-demo">
+        <div id="root"></div>
+        <img src="./public/media/img/people/woman1.png" id="blank" alt="blank" style="display: none">
+      </section>
+      <!-- Reviews Section -->
+      <section class="reviews-section">
+        <article class="reviews_article">
+          <h6 class="reviews-article_title">Только позитивные эмоции!</h6>
+          <p class="reviews-article_paragraph">
+            Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare.
+            Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall
+            vipor, och mada. Sötägon infravis fotobomba. Dek sos. Nedongar nigt
+            i mijad. Inade fotogram beren, epijögen. Infragisk prende, terans i
+            nede lore. Maning gasat.
+          </p>
+          <a href="" class="reviews-article_button">Оставить отзыв!</a>
+        </article>
+
+        <div class="reviews_comments">
+          <div class="reviews-comments_comment">
+            <div class="reviews-comments_video"></div>
+            <img
+              src="./public/media/img/icons/rating.svg"
+              alt="Rating"
+              class="reviews-comments_rating"
+            />
+            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
+            <p class="reviews-comments_paragraph">
+              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare.
+              Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall
+              vipor, och mada.
+            </p>
+            <p class="reviews-comments_date">04.03.2024</p>
+          </div>
+
+          <div class="reviews-comments_comment">
+            <div class="reviews-comments_video"></div>
+            <img
+              src="./public/media/img/icons/rating.svg"
+              alt="Rating"
+              class="reviews-comments_rating"
+            />
+            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
+            <p class="reviews-comments_paragraph">
+              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare.
+              Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall
+              vipor, och mada.
+            </p>
+            <p class="reviews-comments_date">04.03.2024</p>
+          </div>
+
+          <div class="reviews-comments_comment">
+            <div class="reviews-comments_video"></div>
+            <img
+              src="./public/media/img/icons/rating.svg"
+              alt="Rating"
+              class="reviews-comments_rating"
+            />
+            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
+            <p class="reviews-comments_paragraph">
+              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare.
+              Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall
+              vipor, och mada.
+            </p>
+            <p class="reviews-comments_date">04.03.2024</p>
+          </div>
+
+          <div class="reviews-comments_comment">
+            <div class="reviews-comments_video"></div>
+            <img
+              src="./public/media/img/icons/rating.svg"
+              alt="Rating"
+              class="reviews-comments_rating"
+            />
+            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
+            <p class="reviews-comments_paragraph">
+              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare.
+              Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall
+              vipor, och mada.
+            </p>
+            <p class="reviews-comments_date">04.03.2024</p>
+          </div>
+
+          <div class="reviews-comments_comment">
+            <div class="reviews-comments_video"></div>
+            <img
+              src="./public/media/img/icons/rating.svg"
+              alt="Rating"
+              class="reviews-comments_rating"
+            />
+            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
+            <p class="reviews-comments_paragraph">
+              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare.
+              Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall
+              vipor, och mada.
+            </p>
+            <p class="reviews-comments_date">04.03.2024</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join Section -->
+      <section class="join-section container">
+        <h6 class="join_title">Присоединяйтесь к MULT.AI!</h6>
+      </section>
+    </main>
+  </body>
+</html>

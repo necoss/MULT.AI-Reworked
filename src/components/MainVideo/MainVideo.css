@@ -1,0 +1,26 @@
+.audio-player {
+    display: none;
+}
+.webcam{
+    position: absolute;
+    top: 100%;
+    transform: translateY(-75%);
+}
+.startgame_btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 70px;
+    background-color: #e43c13;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+

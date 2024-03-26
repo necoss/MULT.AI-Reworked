@@ -283,6 +283,8 @@ body {
 }
 
 .m-main {
+  // TEST
+
   // Hero Section
   .hero-section {
     position: relative;
@@ -301,10 +303,21 @@ body {
     .hero_big-pic {
       margin-top: 25px;
       height: calc(var(--index) * 65);
-      flex-shrink: 0;
-      border-radius: 20px;
-      background: var(--color-text-black);
-      box-shadow: 0px 4px 12.5px 1px rgba(0, 0, 0, 0.25);
+      // flex-shrink: 0;
+      // border-radius: 20px;
+      // background: var(--color-text-black);
+
+      // width: 100%;
+      position: relative;
+
+      .hero_big-pic_video {
+        position: absolute;
+        width: 100%;
+        height: calc(var(--index) * 65);
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0px 4px 12.5px 1px rgba(0, 0, 0, 0.25);
+      }
     }
 
     .hero_scrolldown {
@@ -347,6 +360,7 @@ body {
 
   // Problems Section
   .problems-section {
+    padding-top: 600px;
     position: relative;
     background: var(--color-text-black);
     border-radius: 0 0 30px 30px;
@@ -515,7 +529,7 @@ body {
           background-color: var(--color-text-black);
           height: 100%;
           border-radius: 50px;
-  
+
           &::before,
           &::after {
             position: absolute;
@@ -528,18 +542,18 @@ body {
             left: 50%;
             transform: translateX(-50%);
           }
-    
+
           &:after {
             bottom: 0;
             background-color: var(--color-default-white);
           }
-  
+
           .timeline_line_line-inner {
             position: relative;
             width: 100%;
             height: 100%;
             background-color: var(--color-text-grey);
-  
+
             .timeline_line_line-inner_ball {
               width: 32px;
               height: 32px;
@@ -563,38 +577,59 @@ body {
           min-height: 300px;
           color: #000;
 
-          &.active{
-            .timeline_content{
-              transition: .4s ease-in-out;
+          &.active {
+            .timeline_content {
+              transition: 0.4s ease-in-out;
               opacity: 1;
 
-              .content-mult_title{
+              .content-mult_title {
                 color: var(--color-text-accent);
               }
             }
           }
 
-          .timeline_content{
+          .timeline_content {
             display: flex;
-            justify-content: space-around;
-            background: var(--color-default-black);
+            // justify-content: space-around;
             opacity: 0;
             position: relative;
             z-index: 10;
-            width: 600px;
-            padding: 30px;
+
             border-radius: 20px;
 
-            .content-mult_title{
-              color: var(--color-text-black);
-              transition: 0.6s ease;
-              color: var(--color-text-white);
-              
+            .content_section {
+              width: 450px;
+
+              &:not(:last-child) {
+                margin-right: 50px;
+              }
+
+              .content-mult_title {
+                color: var(--color-text-black);
+                transition: 0.6s ease;
+                font-size: 30px;
+                background-color: var(--color-text-white);
+                text-align: center;
+                text-transform: uppercase;
+              }
+
+              .timeline_paragraph {
+                // text-align: start;
+                color: var(--color-text-white);
+                padding: 20px 10px;
+                background: rgba(38, 38, 38, 0.74);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(38, 38, 38, 0.35);
+                border-radius: 15px;
+                font-size: 16px;
+                height: calc(var(--index) * 20);
+              }
             }
           }
-          
         }
-
       }
     }
   }
@@ -710,7 +745,7 @@ body {
           }
         }
 
-        .seasons_series_all_preview{
+        .seasons_series_all_preview {
           position: absolute;
           left: 50%;
           top: 15%;
@@ -720,8 +755,12 @@ body {
           align-items: center;
           justify-content: center;
 
-          .seasons_series_all_preview_lock{
+          .seasons_series_all_preview_lock {
             margin: 20px 0;
+          }
+
+          .seasons_series_all_preview_line {
+            width: calc(var(--index) * -1.35);
           }
         }
 
@@ -790,35 +829,14 @@ body {
           left: 50%;
           transform: translateX(-50%);
         }
-
-        .seasons_series_all_hr1 {
-          background: var(--color-text-black);
-          position: absolute;
-          rotate: 90deg;
-          width: calc(var(--index) * 5);
-          left: calc(var(--index) * 13.7);
-          top: 18%;
-          transition: 0.1s ease;
-          border-bottom: 0;
-        }
-
-        .seasons_series_all_hr2 {
-          background: var(--color-text-black);
-          position: absolute;
-          rotate: 90deg;
-          width: calc(var(--index) * 5);
-          left: calc(var(--index) * 13.7);
-          bottom: 18%;
-          transition: 0.1s ease;
-          border-bottom: 0;
-        }
       }
 
-      .seasons_series_all_active{
-        transition: .4s ease ;
-        &:hover{
-          .seasons_series_all_preview{
-            opacity:0;
+      .seasons_series_all_active {
+        transition: 0.4s ease;
+
+        &:hover {
+          .seasons_series_all_preview {
+            opacity: 0;
           }
         }
       }
@@ -826,15 +844,19 @@ body {
       .seasons_series_1 {
         background: #9e9e9e;
       }
+
       .seasons_series_2 {
         background: #8b8b8b;
       }
+
       .seasons_series_3 {
         background: #777777;
       }
+
       .seasons_series_4 {
         background: #6b6b6b;
       }
+
       .seasons_series_5 {
         background: #5e5e5e;
       }
@@ -961,6 +983,76 @@ body {
       font-weight: 600;
       line-height: normal;
       text-transform: uppercase;
+    }
+  }
+}
+
+.m-footer {
+  background: var(--color-text-black);
+  padding-bottom: 40px;
+
+  .footer-content {
+    @include flex-between-center();
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .footer-content_logo {
+      text-align: center;
+
+      .footer-logo {
+        color: var(--color-text-white);
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+
+      .footer_to-top {
+        width: 29px;
+        height: 29px;
+        background: var(--color-text-white);
+        padding: 10px 13px 6px 13px;
+        border-radius: 50%;
+      }
+    }
+
+    .footer-content_sections {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+
+      .footer-content_sections_section {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        &:not(:last-child) {
+          margin-right: 80px;
+        }
+
+        .footer-sections_title {
+          color: var(--color-text-white);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+        }
+
+        .footer-sections_list {
+          color: var(--color-text-white);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+
+          margin-top: 32px;
+        }
+      }
     }
   }
 }

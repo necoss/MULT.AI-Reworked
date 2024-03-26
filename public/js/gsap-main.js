@@ -15,7 +15,7 @@ gsap.ticker.lagSmoothing(0);
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
-  //* Hero Section Block Expansion
+  //* Hero Section Block Expansion -------------------------
   const blockExpansion = gsap
     .timeline({
       scrollTrigger: {
@@ -26,20 +26,52 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "35% 50%",
         end: "+=300px",
       },
-    })
-    .to(".hero_big-pic", {
+    }).to(".hero_big-pic", {
       scale: 2.2,
       ease: "none",
-    });
+  });
 
-  //* Comments Transition
+
+  //* Hero Section Black Video -------------------------
+  const videos = gsap.utils.toArray('.vid')
+
+  videos.forEach(function(video, i) {
+    ScrollTrigger.create({
+      trigger: video,
+      start: '40% 50%',
+      end: 'bottom top',
+      // markers: true,
+      onEnter: () => video.play(),
+      onEnterBack: () => video.play(),
+      onLeave: () => video.pause(),
+      onLeaveBack: () => video.pause(),
+    });
+    
+  })
+
+  //* Hero Scroll Down Setup -------------------------
+  const scrollDown = document.querySelector('.hero_scrolldown')
+
+  gsap.to(scrollDown, {
+    autoAlpha: 0,
+    ease: "power1.in",
+    scrollTrigger: {
+      trigger: scrollDown,
+      start: 'top 90%',
+      end: 'top 90%',
+      scrub: true,
+      // markers: true,
+    }
+  });
+
+  //* Comments Transition -------------------------
   const commentsBlock = gsap.timeline({
     scrollTrigger: {
-      trigger: ".problems-section",
+      trigger: ".problems_title",
       scrub: true,
       pin: ".problems_title",
       start: "-400px 100px",
-      end: "+=350%",
+      end: "+=370%",
       // markers: true,
     },
   });
@@ -58,7 +90,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
-  //* Episodes Preview Block Transition
+  //* Episodes Preview Block Transition -------------------------
   const episodesPreviewBlock = gsap
     .timeline({
       scrollTrigger: {
@@ -76,7 +108,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       borderRadius: "0%",
     });
 
-  //* Pin Series section
+  //* Pin Series section -------------------------
   const pinSeriesSection = gsap.timeline({
     scrollTrigger: {
       trigger: ".seasons-section",
@@ -88,7 +120,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  //* Horizontal Reviews Block Animation
+  //* Horizontal Reviews Block Animation -------------------------
   gsap.to(".reviews-section", {
     xPercent: -100,
     scrollTrigger: {
@@ -101,7 +133,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
   });
 
-  //* Timeline Section
+  //* Timeline Section -------------------------
   const sectionWrap = document.querySelector(".timeline");
 
   ScrollTrigger.create({
@@ -109,15 +141,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     start: "top 35%",
 
     endTrigger: ".timeline", // outside timeline
-    end: "bottom-=24px 35%", //The end point must be the bottom point of the timeline !!! bottom-=24px 35% 
+    end: "bottom-=24px 35%", //The end point must be the bottom point of the timeline !!! bottom-=24px 35%
 
     pin: true,
     // markers: true,
     pinSpacing: false,
     scrub: 1,
-    //toggleClass: { targets: ".section", className: "active" }
   });
-  
+
   gsap.utils.toArray(".timeline_section").forEach((tSection) => {
     const timelineSection = gsap.timeline({
       scrollTrigger: {
@@ -125,7 +156,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "+=30px 35%",
         end: "+=35%",
         toggleClass: "active",
-        markers: true,
+        // markers: true,
         // pin: true,
       },
     });

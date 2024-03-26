@@ -11,7 +11,7 @@
     left: 28px;
     border-radius: 50%;
     border: 16px solid #000;
-    border-color: #e43c13 transparent #e43c13 transparent;
+    border-color: #f0f1fa transparent #f0f1fa transparent;
     animation: ldio-bkciyf8mibg 1s linear infinite;
   }
   
@@ -23,7 +23,7 @@
     animation: ldio-bkciyf8mibg 1s linear infinite reverse;
   }
   .ldio-bkciyf8mibg > div:nth-child(2) {
-    border-color: transparent #fd6c48 transparent #fd6c48
+    border-color: transparent #6e6e6e   transparent #6e6e6e 
   }
   .ldio-bkciyf8mibg > div:nth-child(3) { border-color: transparent }
   .ldio-bkciyf8mibg > div:nth-child(3) div {
@@ -40,14 +40,14 @@
     height: 16px;
     top: -16px;
     left: 48px;
-    background: #e43c13;
+    background: #f0f1fa;
     border-radius: 50%;
-    box-shadow: 0 128px 0 0 #e43c13;
+    box-shadow: 0 128px 0 0 #f0f1fa ;
   }
   .ldio-bkciyf8mibg > div:nth-child(3) div:after {
     left: -16px;
     top: 48px;
-    box-shadow: 128px 0 0 0 #e43c13;
+    box-shadow: 128px 0 0 0 #f0f1fa ;
   }
   
   .ldio-bkciyf8mibg > div:nth-child(4) { border-color: transparent; }
@@ -65,14 +65,14 @@
     height: 16px;
     top: -16px;
     left: 30px;
-    background: #fd6c48;
+    background: #6e6e6e ;
     border-radius: 50%;
-    box-shadow: 0 92px 0 0 #fd6c48;
+    box-shadow: 0 92px 0 0 #6e6e6e  ;
   }
   .ldio-bkciyf8mibg > div:nth-child(4) div:after {
     left: -16px;
     top: 30px;
-    box-shadow: 92px 0 0 0 #fd6c48;
+    box-shadow: 92px 0 0 0 #6e6e6e   ;
   }
   .loadingio-spinner-double-ring-05qdriyhpqgw {
     position: absolute;

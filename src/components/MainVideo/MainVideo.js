@@ -95,7 +95,7 @@ const MainVideo = () => {
         initializeDetection(canvasRef, setLoading);
         intervalRef.current = setInterval(detectAllPoints, 500);
       }
-
+      // eslint-disable-next-line
     }, [isGameStarted]);
 
 
@@ -138,7 +138,7 @@ const MainVideo = () => {
     }
 
     return (
-      <React.Fragment>
+      <div style={ {backgroundColor: (isGameStarted && !loading) && 'black'}} className='initial-game'>
         {isGameStarted ? (
             (loading) ? 
             (<Loader/>) :
@@ -149,7 +149,7 @@ const MainVideo = () => {
             Начать игру
           </button>
         )}
-      </React.Fragment>
+      </div>
     );
   };
   

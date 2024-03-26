@@ -4,10 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className='initial-game'>
       <MainVideo />
-    </div>
-
   );
 }
 

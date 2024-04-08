@@ -18,7 +18,7 @@ function TheGame({playerRef, video, endedHandle}){
                     <ReactPlayer ref={playerRef} width={'100%'} height={'100%'} url={video} playing={true} onEnded={endedHandle}  />
                 </div>
                 <div className="webcam">
-                    <ReactWebcam height={400} width={300} mirrored={true}/>
+                    <ReactWebcam height={300} width={400} mirrored={true}/>
                 </div>
             </div>
 

@@ -4,7 +4,9 @@
 .webcam{
     position: absolute;
     top: 100%;
-    transform: translateY(-75%);
+    transform: translateY(-98%);
+    border-radius: 15px;
+    overflow: hidden;
 }
 .startgame_btn {
     display: block;

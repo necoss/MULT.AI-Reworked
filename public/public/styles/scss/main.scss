@@ -850,6 +850,7 @@ body {
           left: 50%;
           top: 15%;
           transform: translateX(-50%);
+          // transform: translateY(-15%);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -860,7 +861,7 @@ body {
           }
 
           .seasons_series_all_preview_line {
-            width: calc(var(--index) * -1.35);
+            width: -8px;
           }
         }
 
@@ -1423,9 +1424,9 @@ body {
               margin: 20px 0;
             }
   
-            .seasons_series_all_preview_line {
-              width: calc(var(--index) * -0.9);
-            }
+            // .seasons_series_all_preview_line {
+            //   width: calc(var(--index) * -0.9);
+            // }
           }
   
           .seasons_series_all_title {

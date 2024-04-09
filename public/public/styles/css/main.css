@@ -821,7 +821,7 @@ body ul {
   margin: 20px 0;
 }
 .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_line {
-  width: calc(var(--index) * -1.35);
+  width: -8px;
 }
 .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
   color: var(--color-text-white);
@@ -1322,9 +1322,6 @@ body ul {
   }
   .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_lock {
     margin: 20px 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_line {
-    width: calc(var(--index) * -0.9);
   }
   .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
     color: var(--color-text-white);

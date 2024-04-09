@@ -9,10 +9,12 @@ export const initializeDetection = async (canvasRef, setLoading) => {
     const faceModel = faceDetection.SupportedModels.MediaPipeFaceDetector;
     const handModel = handPoseDetection.SupportedModels.MediaPipeHands;
     const detectorConfig = {
-      runtime: 'tfjs',
+      runtime: 'mediapipe',
+      solutionPath: 'https://cdn.jsdelivr.net/npm/@mediapipe/face_detection',
     };
     const handsConfig = {
-      runtime: 'tfjs',
+      runtime: 'mediapipe',
+      solutionPath: 'https://cdn.jsdelivr.net/npm/@mediapipe/hands',
       modelType: 'full',
       maxHands: 2,
     };

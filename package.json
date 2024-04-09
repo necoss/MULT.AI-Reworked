@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mediapipe/face_detection": "^0.4.1646425229",
+    "@mediapipe/face_detection": "^0.4.1657300184",
     "@tensorflow-models/face-detection": "^1.0.2",
     "@tensorflow-models/hand-pose-detection": "^2.0.1",
     "@tensorflow/tfjs-backend-webgl": "^4.17.0",

@@ -708,6 +708,7 @@ body ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 .m-main .episodes-section .episodes_title {
   color: var(--color-text-black);

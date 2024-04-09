@@ -740,6 +740,7 @@ body {
     padding-bottom: 500px;
     @include flex-center-center();
     flex-direction: column;
+    text-align: center;
 
     .episodes_title {
       color: var(--color-text-black);

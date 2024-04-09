@@ -695,6 +695,19 @@ body ul {
 .m-main .episodes-section {
   margin-top: 600px;
   padding-bottom: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .m-main .episodes-section .episodes_title {
   color: var(--color-text-black);
@@ -821,7 +834,7 @@ body ul {
   margin: 20px 0;
 }
 .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_line {
-  width: -8px;
+  width: -10px;
 }
 .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
   color: var(--color-text-white);
@@ -840,16 +853,17 @@ body ul {
   text-wrap: nowrap;
 }
 .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_paragraph {
-  color: #d9d9d9;
-  font-size: 12px;
+  color: var(--color-text-white);
+  font-size: 14px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 130%;
   padding-top: 7px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   opacity: 0;
-  width: 350px;
+  width: 380px;
+  -webkit-text-stroke: 0.2px var(--color-text-black);
   position: absolute;
   top: calc(var(--index) * 55);
   left: 50%;

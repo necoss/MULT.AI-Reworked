@@ -738,6 +738,8 @@ body {
   .episodes-section {
     margin-top: 600px;
     padding-bottom: 500px;
+    @include flex-center-center();
+    flex-direction: column;
 
     .episodes_title {
       color: var(--color-text-black);
@@ -861,7 +863,7 @@ body {
           }
 
           .seasons_series_all_preview_line {
-            width: -8px;
+            width: -10px;
           }
         }
 
@@ -882,15 +884,16 @@ body {
         }
 
         .seasons_series_all_paragraph {
-          color: #d9d9d9;
-          font-size: 12px;
+          color: var(--color-text-white);
+          font-size: 14px;
           font-style: normal;
-          font-weight: 300;
+          font-weight: 400;
           line-height: 130%;
           padding-top: 7px;
           transition: 0.3s ease;
           opacity: 0;
-          width: 350px;
+          width: 380px;
+          -webkit-text-stroke: .2px var(--color-text-black);
 
           position: absolute;
           top: calc(var(--index) * 55);

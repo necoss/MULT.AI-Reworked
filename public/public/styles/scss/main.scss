@@ -1361,7 +1361,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1600px) {
   .m-header {
     .header-navigation {
       .navigation_right {
@@ -1870,11 +1870,109 @@ body {
       .join_title {
         text-align: center;
         color: var(--color-text-black);
-        font-size: 88px;
+        font-size: 70px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         text-transform: uppercase;
+      }
+  
+      .join_cards {
+        @include flex-between-center();
+        margin-top: 50px;
+  
+        .join-cards_card {
+          background: var(--color-text-black);
+          width: calc(var(--index) * 40);
+          height: 600px;
+          padding: 30px;
+          border-radius: 20px;
+          position: relative;
+  
+          &:first-child {
+            .join-cards_card-name {
+              font-size: calc(var(--index) * 4.9);
+            }
+          }
+  
+          .join-cards_card-top {
+            @include flex-between-center();
+  
+            .join-cards_card-top_plan {
+              font-size: 12px;
+              background: var(--color-text-white);
+              color: var(--color-text-black);
+              padding: 11px 20px;
+              border-radius: 20px;
+            }
+            .join-cards_card-top_plan-descr {
+              color: var(--color-text-grey);
+              font-size: 12px;
+            }
+          }
+  
+          .join-cards_card-name {
+            color: #313131;
+            font-size: calc(var(--index) * 4.5);
+            font-weight: 700;
+            text-wrap: nowrap;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 130px;
+          }
+          .join-cards_card-price {
+            font-size: 64px;
+            color: var(--color-text-white);
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+            margin-top: 100px;
+  
+            span {
+              font-size: 20px;
+              font-weight: 300;
+            }
+          }
+  
+          .join-cards_card-advantages {
+            margin-top: 20px;
+  
+            .join-cards_card-advantages-advantage {
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+              font-weight: 300;
+              color: var(--color-text-white);
+  
+              &:not(:last-child) {
+                margin-bottom: 15px;
+              }
+  
+              span {
+                margin-right: 5px;
+              }
+            }
+  
+            .advantage-tick {
+              text-decoration: underline;
+            }
+          }
+  
+          .join-cards_card-button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px 130px;
+            bottom: 40px;
+            background: var(--color-text-white);
+            color: var(--color-text-black);
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+          }
+        }
       }
     }
   }

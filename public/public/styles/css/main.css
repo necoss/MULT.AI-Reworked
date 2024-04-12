@@ -71,7 +71,7 @@ body ul {
   position: relative;
   width: 500px;
   height: 12px;
-  background: #EDEEF7;
+  background: #edeef7;
   border-radius: 50px;
 }
 
@@ -1088,10 +1088,116 @@ body ul {
   line-height: normal;
   text-transform: uppercase;
 }
+.m-main .join-section .join_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+.m-main .join-section .join_cards .join-cards_card {
+  background: var(--color-text-black);
+  width: 500px;
+  height: 700px;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+}
+.m-main .join-section .join_cards .join-cards_card:first-child .join-cards_card-name {
+  font-size: 77px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-top .join-cards_card-top_plan {
+  font-size: 14px;
+  background: var(--color-text-white);
+  color: var(--color-text-black);
+  padding: 11px 40px;
+  border-radius: 20px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-top .join-cards_card-top_plan-descr {
+  color: var(--color-text-grey);
+  font-size: 14px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-name {
+  color: #313131;
+  font-size: 82px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 120px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-price {
+  font-size: 64px;
+  color: var(--color-text-white);
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  margin-top: 100px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-price span {
+  font-size: 20px;
+  font-weight: 300;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages {
+  margin-top: 20px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .join-cards_card-advantages-advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--color-text-white);
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .join-cards_card-advantages-advantage:not(:last-child) {
+  margin-bottom: 15px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .join-cards_card-advantages-advantage span {
+  margin-right: 5px;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .advantage-tick {
+  text-decoration: underline;
+}
+.m-main .join-section .join_cards .join-cards_card .join-cards_card-button {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 30px 180px;
+  bottom: 40px;
+  background: var(--color-text-white);
+  color: var(--color-text-black);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 50px;
+}
 
 .m-footer {
   background: var(--color-text-black);
   padding-bottom: 40px;
+  margin-top: 600px;
 }
 .m-footer .footer-content {
   display: -webkit-box;

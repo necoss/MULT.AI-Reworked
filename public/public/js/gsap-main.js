@@ -326,12 +326,28 @@ document.addEventListener("DOMContentLoaded", (event) => {
       );
   }
 
+  function priceAnimation() {
+    const priceLoadingAnimation = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".join-section",
+        scrub: true,
+        // markers: true,
+        start: "350% 50%",
+        end: "+=400px",
+      },
+    });
+
+    priceLoadingAnimation.fromTo('join-section', {y: -20, opacity: 0, duration: 1}, {y:0, opacity: 1,})
+  }
+
+ 
   headerAnimation();
   addictionAnimation();
   timelineAnimation();
   episodesAnimation();
   commentsAnimation();
   thoughts();
+  priceAnimation();
 
   //* Hero Section Block Expansion -------------------------
   const blockExpansion = gsap

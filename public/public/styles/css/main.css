@@ -487,9 +487,9 @@ body ul {
   font-weight: 700;
 }
 .m-main .problems-section .problems_slider .problems-slider_wrapper .problems-slider_slide .problems-slider_comment .problems-slider_image {
-  width: 700px;
+  width: 400px;
   position: absolute;
-  left: calc(var(--index) * -50);
+  left: calc(var(--index) * -30);
   top: calc(var(--index) * 15);
 }
 .m-main .problems-section .problems_slider .problems-slider_wrapper .problems-slider_slide .problems-slider_comment .problems-slider_comment_circle {

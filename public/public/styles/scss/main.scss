@@ -506,9 +506,9 @@ body {
             }
 
             .problems-slider_image {
-              width: 700px;
+              width: 400px;
               position: absolute;
-              left: calc(var(--index) * -50);
+              left: calc(var(--index) * -30);
               top: calc(var(--index) * 15);
             }
 

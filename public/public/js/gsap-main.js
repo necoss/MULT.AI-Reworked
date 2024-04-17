@@ -324,6 +324,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
           duration: 1,
         }
       );
+
+    //* Horizontal Reviews Block Animation -------------------------
+    gsap.to(".reviews-section", {
+      xPercent: -100,
+      scrollTrigger: {
+        trigger: ".reviews-section",
+        start: "top top",
+        end: "+=3000px",
+        pin: ".reviews-section",
+        scrub: true,
+        // markers: true,
+      },
+    });
   }
 
   function priceAnimation() {
@@ -337,17 +350,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     });
 
-    priceLoadingAnimation.fromTo('join-section', {y: -20, opacity: 0, duration: 1}, {y:0, opacity: 1,})
+    priceLoadingAnimation.fromTo("join-section", { y: -20, opacity: 0, duration: 1 }, { y: 0, opacity: 1 });
   }
 
- 
-  headerAnimation();
-  addictionAnimation();
-  timelineAnimation();
-  episodesAnimation();
-  commentsAnimation();
-  thoughts();
-  priceAnimation();
+  // headerAnimation();
+  // addictionAnimation();
+  // timelineAnimation();
+  // episodesAnimation();
+  // commentsAnimation();
+  // thoughts();
+  // priceAnimation();
 
   //* Hero Section Block Expansion -------------------------
   const blockExpansion = gsap
@@ -425,19 +437,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       // markers: true,
       start: "top top",
       end: "+=100px",
-    },
-  });
-
-  //* Horizontal Reviews Block Animation -------------------------
-  gsap.to(".reviews-section", {
-    xPercent: -100,
-    scrollTrigger: {
-      trigger: ".reviews-section",
-      start: "top top",
-      end: "+=3000px",
-      pin: ".reviews-section",
-      scrub: true,
-      // markers: true,
     },
   });
 });

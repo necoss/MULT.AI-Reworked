@@ -15,6 +15,18 @@ gsap.ticker.lagSmoothing(0);
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
+  console.log(document.documentElement.clientWidth)
+
+  if (document.documentElement.clientWidth >= 1400) {
+    headerAnimation();
+    addictionAnimation();
+    timelineAnimation();
+    episodesAnimation();
+    commentsAnimation();
+    thoughts();
+    priceAnimation();
+  }
+
   function headerAnimation() {
     const headerLoadingAnimation = gsap.timeline({ repeatDelay: 1 });
 
@@ -72,15 +84,38 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
       });
 
-    // var splitHeroTitle = new SplitText(".hero_title", {type: "chars"});
+    //* Hero Section Block Expansion -------------------------
+    const blockExpansion = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".hero_big-pic",
+          scrub: true,
+          //   pin: true,
+          // markers: true,
+          start: "35% 50%",
+          end: "+=400px",
+        },
+      })
+      .to(".hero_big-pic", {
+        scale: 2.2,
+        ease: "none",
+      });
 
-    // gsap.from(splitHeroTitle.chars, {
-    //   duration: 1,
-    //   y: 100,
-    //   autoAlpha: 0,
-    //   stagger: 0.05,
-    //   delay: 1.3,
-    // });
+    //* Hero Section Black Video -------------------------
+    const videos = gsap.utils.toArray(".vid");
+
+    videos.forEach(function (video, i) {
+      ScrollTrigger.create({
+        trigger: video,
+        start: "40% 50%",
+        end: "bottom top",
+        // markers: true,
+        onEnter: () => video.play(),
+        onEnterBack: () => video.play(),
+        onLeave: () => video.pause(),
+        onLeaveBack: () => video.pause(),
+      });
+    });
   }
 
   function thoughts() {
@@ -114,6 +149,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
       // console.log('2')
     }
     thoughtsConst.from(".problems_slider", { opacity: 0, duration: 1 });
+
+    //* Comments Transition -------------------------
+    let sections = gsap.utils.toArray(".problems-slider_slide");
+
+    sections.forEach((section) => {
+      gsap.to(section, {
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: section,
+          start: "top top+=100",
+          scrub: true,
+          end: "+=400",
+          // markers: true,
+        },
+      });
+    });
   }
 
   function addictionAnimation() {
@@ -252,27 +303,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
     });
 
-    // let splitHeroTitle = new SplitText(".episodes_title", {type: "chars"});
-    // let splitHeroSubTitle = new SplitText(".episodes_subtitle", {type: "chars"});
+    //* Episodes Preview Block Transition -------------------------
+    const episodesPreviewBlock = gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".episodes_transition-screen",
+          scrub: true,
+          //   pin: true,
+          // markers: true,
+          start: "35% 50%",
+          end: "+=300px",
+        },
+      })
+      .to(".episodes_transition-screen", {
+        scale: 4,
+        ease: "none",
+        borderRadius: "0%",
+      });
 
-    // episodesLoadingAnimation.from(splitHeroTitle.chars, {
-    //   duration: 3,
-    //   y: 100,
-    //   autoAlpha: 0,
-    //   stagger: 0.05,
-    //   delay: 2,
-    // }).from(splitHeroSubTitle.chars, {
-    //   duration: 3,
-    //   y: 100,
-    //   autoAlpha: 0,
-    //   stagger: 0.05,
-    //   delay: 2,
-    // }).from('.episodes_transition-screen', {
-    //   opacity: 0,
-    //   y: 40,
-    //   duration: 3,
-    //   delay:1,
-    // })
+    //* Pin Series section -------------------------
+    const pinSeriesSection = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".seasons-section",
+        scrub: true,
+        pin: true,
+        // markers: true,
+        start: "top top",
+        end: "+=100px",
+      },
+    });
   }
 
   function commentsAnimation() {
@@ -353,91 +412,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     priceLoadingAnimation.fromTo("join-section", { y: -20, opacity: 0, duration: 1 }, { y: 0, opacity: 1 });
   }
-
-  headerAnimation();
-  addictionAnimation();
-  timelineAnimation();
-  episodesAnimation();
-  commentsAnimation();
-  thoughts();
-  priceAnimation();
-
-  //* Hero Section Block Expansion -------------------------
-  const blockExpansion = gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".hero_big-pic",
-        scrub: true,
-        //   pin: true,
-        // markers: true,
-        start: "35% 50%",
-        end: "+=400px",
-      },
-    })
-    .to(".hero_big-pic", {
-      scale: 2.2,
-      ease: "none",
-    });
-
-  //* Hero Section Black Video -------------------------
-  const videos = gsap.utils.toArray(".vid");
-
-  videos.forEach(function (video, i) {
-    ScrollTrigger.create({
-      trigger: video,
-      start: "40% 50%",
-      end: "bottom top",
-      // markers: true,
-      onEnter: () => video.play(),
-      onEnterBack: () => video.play(),
-      onLeave: () => video.pause(),
-      onLeaveBack: () => video.pause(),
-    });
-  });
-
-  //* Comments Transition -------------------------
-  let sections = gsap.utils.toArray(".problems-slider_slide");
-
-  sections.forEach((section) => {
-    gsap.to(section, {
-      autoAlpha: 0,
-      scrollTrigger: {
-        trigger: section,
-        start: "top top+=100",
-        scrub: true,
-        end: "+=400",
-        // markers: true,
-      },
-    });
-  });
-
-  //* Episodes Preview Block Transition -------------------------
-  const episodesPreviewBlock = gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".episodes_transition-screen",
-        scrub: true,
-        //   pin: true,
-        // markers: true,
-        start: "35% 50%",
-        end: "+=300px",
-      },
-    })
-    .to(".episodes_transition-screen", {
-      scale: 4,
-      ease: "none",
-      borderRadius: "0%",
-    });
-
-  //* Pin Series section -------------------------
-  const pinSeriesSection = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".seasons-section",
-      scrub: true,
-      pin: true,
-      // markers: true,
-      start: "top top",
-      end: "+=100px",
-    },
-  });
 });

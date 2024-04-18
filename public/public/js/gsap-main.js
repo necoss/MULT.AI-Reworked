@@ -98,8 +98,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: ".problems_title",
       start: "-60px top",
-      end: "+=350%",
+      end: "+=170%",
       pin: true,
+      // markers: true,
     });
 
     thoughtsConst.from(".problems_title", { fontSize: 56, duration: 1 });
@@ -353,13 +354,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     priceLoadingAnimation.fromTo("join-section", { y: -20, opacity: 0, duration: 1 }, { y: 0, opacity: 1 });
   }
 
-  // headerAnimation();
-  // addictionAnimation();
-  // timelineAnimation();
-  // episodesAnimation();
-  // commentsAnimation();
-  // thoughts();
-  // priceAnimation();
+  headerAnimation();
+  addictionAnimation();
+  timelineAnimation();
+  episodesAnimation();
+  commentsAnimation();
+  thoughts();
+  priceAnimation();
 
   //* Hero Section Block Expansion -------------------------
   const blockExpansion = gsap

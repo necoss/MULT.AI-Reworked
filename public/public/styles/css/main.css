@@ -389,6 +389,7 @@ body ul {
   line-height: normal;
   -webkit-animation: scrolltext-blink 2s ease-in-out 0s infinite;
           animation: scrolltext-blink 2s ease-in-out 0s infinite;
+  text-transform: uppercase;
 }
 @-webkit-keyframes scrolltext-blink {
   0% {
@@ -482,10 +483,10 @@ body ul {
   font-weight: 700;
 }
 .m-main .problems-section .problems_slider .problems-slider_wrapper .problems-slider_slide .problems-slider_comment .problems-slider_image {
-  width: 400px;
+  width: 350px;
   position: absolute;
-  left: calc(var(--index) * -30);
-  top: calc(var(--index) * 15);
+  left: calc(var(--index) * -25);
+  top: calc(var(--index) * 17);
 }
 .m-main .problems-section .problems_slider .problems-slider_wrapper .problems-slider_slide .problems-slider_comment .problems-slider_comment_circle {
   position: absolute;
@@ -725,11 +726,7 @@ body ul {
 .m-main .episodes-section .episodes_transition-screen {
   margin-top: 100px;
   width: 925px;
-  height: 399px;
-  border-radius: 20px;
-  background: var(--color-text-black);
-  -webkit-box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 .m-main .seasons-section {
   position: relative;
@@ -1834,11 +1831,7 @@ body ul {
   .m-main .episodes-section .episodes_transition-screen {
     margin-top: 60px;
     width: 100%;
-    height: 399px;
     border-radius: 20px;
-    background: var(--color-text-black);
-    -webkit-box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
   }
   .m-main .seasons-section {
     position: relative;
@@ -2886,11 +2879,7 @@ body ul {
   .m-main .episodes-section .episodes_transition-screen {
     margin-top: 60px;
     width: 100%;
-    height: 399px;
     border-radius: 20px;
-    background: var(--color-text-black);
-    -webkit-box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
   }
   .m-main .seasons-section {
     position: relative;
@@ -3968,11 +3957,7 @@ body ul {
   .m-main .episodes-section .episodes_transition-screen {
     margin-top: 60px;
     width: 100%;
-    height: 399px;
     border-radius: 20px;
-    background: var(--color-text-black);
-    -webkit-box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
   }
   .m-main .seasons-section {
     position: relative;
@@ -4990,11 +4975,7 @@ body ul {
   .m-main .episodes-section .episodes_transition-screen {
     margin-top: 60px;
     width: 100%;
-    height: 399px;
     border-radius: 20px;
-    background: var(--color-text-black);
-    -webkit-box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
   }
   .m-main .seasons-section {
     position: relative;
@@ -5560,7 +5541,7 @@ body ul {
     margin-top: 26px;
   }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .container {
     padding: 0 100px;
   }
@@ -5753,13 +5734,13 @@ body ul {
             box-shadow: 0px 4px 12.5px 1px rgba(0, 0, 0, 0.25);
   }
 }
-@media only screen and (min-width: 1201px) and (min-width: 1110px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1110px) {
   .m-main .hero-section .hero_big-pic .hero-mask .hero_big-pic_video {
     -o-object-position: 0px 0;
        object-position: 0px 0;
   }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .m-main .hero-section .hero_scrolldown {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5997,11 +5978,7 @@ body ul {
   .m-main .episodes-section .episodes_transition-screen {
     margin-top: 60px;
     width: 100%;
-    height: 500px;
     border-radius: 20px;
-    background: var(--color-text-black);
-    -webkit-box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
   }
   .m-main .seasons-section {
     position: relative;
@@ -6398,12 +6375,12 @@ body ul {
     font-size: calc(var(--index) * 9.5);
   }
 }
-@media only screen and (min-width: 1201px) and (min-width: 1580px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1580px) {
   .m-main .join-section .join_cards .join-cards_card:first-child .join-cards_card-name {
     font-size: calc(var(--index) * 8.3);
   }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .m-main .join-section .join_cards .join-cards_card:not(:first-child) {
     margin-top: 60px;
   }
@@ -6443,17 +6420,17 @@ body ul {
     top: 120px;
   }
 }
-@media only screen and (min-width: 1201px) and (min-width: 1230px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1230px) {
   .m-main .join-section .join_cards .join-cards_card .join-cards_card-name {
     font-size: calc(var(--index) * 9);
   }
 }
-@media only screen and (min-width: 1201px) and (min-width: 1580px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1580px) {
   .m-main .join-section .join_cards .join-cards_card .join-cards_card-name {
     font-size: calc(var(--index) * 8.3);
   }
 }
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .m-main .join-section .join_cards .join-cards_card .join-cards_card-price {
     font-size: 48px;
     color: var(--color-text-white);

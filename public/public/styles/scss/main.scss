@@ -595,15 +595,34 @@ body {
   }
 
   // Learn Section
-  .learn-section {
-    display: none;
+  .learn-section { 
+    // display: none;
     margin-top: 250px;
+    text-align: center;
 
     .learn-title {
       font-size: 42px;
       text-align: center;
       font-weight: 700;
       text-transform: uppercase;
+    }
+
+    .learn-descr{
+      padding-top: 15px;
+      @include flex-center-center();
+      .tutorial-text{
+        font-size: 14px;
+        text-align: center;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+  
+      .tutorial-arrow{
+        text-align: center;
+        width: 30px;
+        rotate: -90deg;
+        padding: 0 5px;
+      }
     }
 
     .learn-block {
@@ -619,7 +638,7 @@ body {
           width: 310px;
           height: 200px;
           background: #e1e3ee;
-          padding: 20px;
+          padding: 30px;
           border-radius: 20px;
           -webkit-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
           -moz-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
@@ -643,157 +662,157 @@ body {
   }
 
   // Timeline Section
-  .timeline-section {
-    margin-top: 430px;
+  // .timeline-section {
+  //   margin-top: 430px;
 
-    .timeline_title {
-      color: var(--color-text-black);
-      text-align: center;
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
+  //   .timeline_title {
+  //     color: var(--color-text-black);
+  //     text-align: center;
+  //     font-size: 48px;
+  //     font-style: normal;
+  //     font-weight: 500;
+  //     line-height: normal;
+  //   }
 
-    .timeline_paragraph {
-      text-align: center;
-      color: var(--color-text-grey);
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      padding-top: 15px;
-    }
+  //   .timeline_paragraph {
+  //     text-align: center;
+  //     color: var(--color-text-grey);
+  //     font-size: 24px;
+  //     font-style: normal;
+  //     font-weight: 300;
+  //     line-height: normal;
+  //     padding-top: 15px;
+  //   }
 
-    .timeline_graph {
-      @include flex-center-center();
-      margin-top: 100px;
+  //   .timeline_graph {
+  //     @include flex-center-center();
+  //     margin-top: 100px;
 
-      .timeline {
-        position: relative;
-        min-height: 150px;
+  //     .timeline {
+  //       position: relative;
+  //       min-height: 150px;
 
-        .timeline_line {
-          position: absolute;
-          z-index: 0;
-          left: calc(50% - 1px);
-          width: 2px;
-          top: 0;
-          background-color: var(--color-text-black);
-          height: 100%;
-          border-radius: 50px;
+  //       .timeline_line {
+  //         position: absolute;
+  //         z-index: 0;
+  //         left: calc(50% - 1px);
+  //         width: 2px;
+  //         top: 0;
+  //         background-color: var(--color-text-black);
+  //         height: 100%;
+  //         border-radius: 50px;
 
-          &::before,
-          &::after {
-            position: absolute;
-            display: block;
-            content: "";
-            height: 1rem;
-            width: 1rem;
-            border-radius: 50%;
-            background-color: var(--color-text-grey);
-            left: 50%;
-            transform: translateX(-50%);
-          }
+  //         &::before,
+  //         &::after {
+  //           position: absolute;
+  //           display: block;
+  //           content: "";
+  //           height: 1rem;
+  //           width: 1rem;
+  //           border-radius: 50%;
+  //           background-color: var(--color-text-grey);
+  //           left: 50%;
+  //           transform: translateX(-50%);
+  //         }
 
-          &:after {
-            bottom: 0;
-            background-color: var(--color-default-white);
-          }
+  //         &:after {
+  //           bottom: 0;
+  //           background-color: var(--color-default-white);
+  //         }
 
-          .timeline_line_line-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-text-grey);
+  //         .timeline_line_line-inner {
+  //           position: relative;
+  //           width: 100%;
+  //           height: 100%;
+  //           background-color: var(--color-text-grey);
 
-            .timeline_line_line-inner_ball {
-              width: 32px;
-              height: 32px;
-              border-radius: 50%;
-              background-color: var(--color-text-accent);
-              margin-left: -15px;
-            }
-          }
-        }
+  //           .timeline_line_line-inner_ball {
+  //             width: 32px;
+  //             height: 32px;
+  //             border-radius: 50%;
+  //             background-color: var(--color-text-accent);
+  //             margin-left: -15px;
+  //           }
+  //         }
+  //       }
 
-        .timeline_section {
-          display: flex;
-          // opacity: 0;
-          // transform: translateX(-100%);
-          // transition: 0.6s ease;
-          position: relative;
-          z-index: 1;
-          margin: 50px 0;
-          padding: 1rem;
-          align-items: center;
-          min-height: 300px;
-          color: #000;
+  //       .timeline_section {
+  //         display: flex;
+  //         // opacity: 0;
+  //         // transform: translateX(-100%);
+  //         // transition: 0.6s ease;
+  //         position: relative;
+  //         z-index: 1;
+  //         margin: 50px 0;
+  //         padding: 1rem;
+  //         align-items: center;
+  //         min-height: 300px;
+  //         color: #000;
 
-          &.active {
-            .timeline_content {
-              transition: 0.4s ease-in-out;
-              opacity: 1;
+  //         &.active {
+  //           .timeline_content {
+  //             transition: 0.4s ease-in-out;
+  //             opacity: 1;
 
-              .content-mult_title {
-                color: var(--color-text-accent);
-              }
-            }
-          }
+  //             .content-mult_title {
+  //               color: var(--color-text-accent);
+  //             }
+  //           }
+  //         }
 
-          .timeline_content {
-            display: flex;
-            // justify-content: space-around;
-            opacity: 0;
-            position: relative;
-            z-index: 10;
+  //         .timeline_content {
+  //           display: flex;
+  //           // justify-content: space-around;
+  //           opacity: 0;
+  //           position: relative;
+  //           z-index: 10;
 
-            border-radius: 20px;
+  //           border-radius: 20px;
 
-            .content_section {
-              width: 450px;
-              background: var(--color-text-black);
-              padding: 20px;
-              border-radius: 20px;
-              height: calc(var(--index) * 40);
+  //           .content_section {
+  //             width: 450px;
+  //             background: var(--color-text-black);
+  //             padding: 20px;
+  //             border-radius: 20px;
+  //             height: calc(var(--index) * 40);
 
-              &:not(:last-child) {
-                margin-right: 50px;
-              }
+  //             &:not(:last-child) {
+  //               margin-right: 50px;
+  //             }
 
-              .content-mult_title {
-                color: var(--color-text-black);
-                transition: 0.6s ease;
-                font-size: 30px;
-                background-color: var(--color-text-white);
-                text-align: center;
-                text-transform: uppercase;
-                border-radius: 20px;
-                padding: 5px 0;
-              }
+  //             .content-mult_title {
+  //               color: var(--color-text-black);
+  //               transition: 0.6s ease;
+  //               font-size: 30px;
+  //               background-color: var(--color-text-white);
+  //               text-align: center;
+  //               text-transform: uppercase;
+  //               border-radius: 20px;
+  //               padding: 5px 0;
+  //             }
 
-              .timeline_paragraph {
-                text-align: start;
-                color: var(--color-text-white);
-                font-size: 16px;
-                padding-top: 30px;
-                // padding: 20px 10px;
-                // background: rgba(38, 38, 38, 0.74);
-                // border-radius: 16px;
-                // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                // backdrop-filter: blur(5px);
-                // -webkit-backdrop-filter: blur(5px);
-                // border: 1px solid rgba(38, 38, 38, 0.35);
-                // border-radius: 15px;
+  //             .timeline_paragraph {
+  //               text-align: start;
+  //               color: var(--color-text-white);
+  //               font-size: 16px;
+  //               padding-top: 30px;
+  //               // padding: 20px 10px;
+  //               // background: rgba(38, 38, 38, 0.74);
+  //               // border-radius: 16px;
+  //               // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  //               // backdrop-filter: blur(5px);
+  //               // -webkit-backdrop-filter: blur(5px);
+  //               // border: 1px solid rgba(38, 38, 38, 0.35);
+  //               // border-radius: 15px;
 
-                // height: calc(var(--index) * 20);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  //               // height: calc(var(--index) * 20);
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   // Episodes Section
   .episodes-section {
@@ -6214,20 +6233,21 @@ body {
           opacity: 0;
           text-align: center;
           text-wrap: nowrap;
-          margin-top: calc(var(--index) * 50);
+          margin-top: 430px;
           text-transform: uppercase;
         }
 
         .seasons_series_all_paragraph {
+          text-align: center;
           color: var(--color-text-white);
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
           line-height: 130%;
-          padding: 10px 20px 20px 20px;
+          // padding: 10px 20px 20px 20px;
           transition: 0.3s ease;
           opacity: 0;
-          width: 380px;
+          padding: 15px 20px;
           -webkit-text-stroke: 0.2px var(--color-text-black);
         }
 

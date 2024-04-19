@@ -24,14 +24,142 @@ document.querySelector('.seasons_series_all_play').addEventListener('click', () 
 })
 playAudio();
 
-// MENU
+//2
+document.querySelector('.seasons_series_2').addEventListener('mouseover',() => {
+  document.querySelector('.seasons_series_1').style.width = '20vw'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '1'
 
-// function menuBurgerButtonAnimation() {
-//   const burgerButton = document.querySelector('#nav-icon3')
+  document.querySelector('.seasons_series_2 .seasons_series_all_preview').style.opacity = '0'
 
-//   burgerButton.addEventListener('click', () => {
-//     burgerButton.classList.toggle('open')
-//   })
-// }
+  const elements = document.querySelectorAll('.seasons_series_2 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '1'
+  }
 
-// menuBurgerButtonAnimation()
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '0'
+  }
+})
+
+document.querySelector('.seasons_series_2').addEventListener('mouseleave',() => {
+  document.querySelector('.seasons_series_1').style.width = 'calc(100vw / 3)'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '0'
+
+  document.querySelector('.seasons_series_2 .seasons_series_all_preview').style.opacity = '1'
+
+  const elements = document.querySelectorAll('.seasons_series_2 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '0'
+  }
+
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '1'
+  }
+})
+
+//3
+document.querySelector('.seasons_series_3').addEventListener('mouseover',() => {
+  document.querySelector('.seasons_series_1').style.width = '20vw'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '1'
+
+  document.querySelector('.seasons_series_3 .seasons_series_all_preview').style.opacity = '0'
+
+  const elements = document.querySelectorAll('.seasons_series_3 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '1'
+  }
+
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '0'
+  }
+})
+
+document.querySelector('.seasons_series_3').addEventListener('mouseleave',() => {
+  document.querySelector('.seasons_series_1').style.width = 'calc(100vw / 3)'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '0'
+
+  document.querySelector('.seasons_series_3 .seasons_series_all_preview').style.opacity = '1'
+
+  const elements = document.querySelectorAll('.seasons_series_3 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '0'
+  }
+
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '1'
+  }
+})
+
+//4
+document.querySelector('.seasons_series_4').addEventListener('mouseover',() => {
+  document.querySelector('.seasons_series_1').style.width = '20vw'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '1'
+
+  document.querySelector('.seasons_series_4 .seasons_series_all_preview').style.opacity = '0'
+
+  const elements = document.querySelectorAll('.seasons_series_4 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '1'
+  }
+
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '0'
+  }
+})
+
+document.querySelector('.seasons_series_4').addEventListener('mouseleave',() => {
+  document.querySelector('.seasons_series_1').style.width = 'calc(100vw / 3)'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '0'
+
+  document.querySelector('.seasons_series_4 .seasons_series_all_preview').style.opacity = '1'
+
+  const elements = document.querySelectorAll('.seasons_series_4 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '0'
+  }
+
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '1'
+  }
+})
+
+//5
+document.querySelector('.seasons_series_5').addEventListener('mouseover',() => {
+  document.querySelector('.seasons_series_1').style.width = '20vw'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '1'
+
+  document.querySelector('.seasons_series_5 .seasons_series_all_preview').style.opacity = '0'
+
+  const elements = document.querySelectorAll('.seasons_series_5 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '1'
+  }
+
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '0'
+  }
+})
+
+document.querySelector('.seasons_series_5').addEventListener('mouseleave',() => {
+  document.querySelector('.seasons_series_1').style.width = 'calc(100vw / 3)'
+  document.querySelector('.seasons_series_1 .seasons_series_all_preview').style.opacity = '0'
+
+  document.querySelector('.seasons_series_5 .seasons_series_all_preview').style.opacity = '1'
+
+  const elements = document.querySelectorAll('.seasons_series_5 .seasons-content')
+  for(let elem of elements){
+    elem.style.opacity = '0'
+  }
+
+  const elements1 = document.querySelectorAll('.seasons_series_1 .seasons-content')
+  for(let elem of elements1){
+    elem.style.opacity = '1'
+  }
+})

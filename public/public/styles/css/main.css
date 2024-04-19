@@ -83,6 +83,14 @@ body ul {
   -webkit-animation: fill 0.3s ease;
           animation: fill 0.3s ease;
 }
+#preloader .preloader_descr {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-text-grey);
+  opacity: 0.7;
+  font-size: 14px;
+  padding-top: 5px;
+}
 @-webkit-keyframes fill {
   0% {
     width: 0%;
@@ -555,6 +563,45 @@ body ul {
   height: calc(var(--index) * 71);
   border-radius: 20px;
 }
+.m-main .learn-section {
+  display: none;
+  margin-top: 250px;
+}
+.m-main .learn-section .learn-title {
+  font-size: 42px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.m-main .learn-section .learn-block .learn-block_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 80px;
+}
+.m-main .learn-section .learn-block .learn-block_row .learn-block_card {
+  text-align: center;
+  width: 310px;
+  height: 200px;
+  background: #e1e3ee;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+  box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+}
+.m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_title {
+  padding-top: 10px;
+  font-size: 32px;
+}
+.m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_subtitle {
+  padding-top: 10px;
+  color: var(--color-text-grey);
+}
 .m-main .timeline-section {
   margin-top: 430px;
 }
@@ -763,216 +810,6 @@ body ul {
   left: calc(var(--index) * 25);
   border-radius: 100%;
 }
-.m-main .seasons-section .seasons_series {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all {
-  position: relative;
-  height: calc(var(--index) * 87);
-  padding: 69px 35px 13px 35px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  width: 25vw;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all:hover {
-  width: 33.3333333333vw;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_title {
-  opacity: 1;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_paragraph {
-  opacity: 1;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_play {
-  opacity: 1;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_number {
-  color: var(--color-text-white);
-}
-.m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr1 {
-  opacity: 0;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr2 {
-  opacity: 0;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview {
-  position: absolute;
-  left: 50%;
-  top: 15%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_lock {
-  margin: 20px 0;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_line {
-  width: -10px;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
-  color: var(--color-text-white);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  opacity: 0;
-  position: absolute;
-  top: calc(var(--index) * 50);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  text-wrap: nowrap;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_paragraph {
-  color: var(--color-text-white);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%;
-  padding-top: 7px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  opacity: 0;
-  width: 380px;
-  -webkit-text-stroke: 0.2px var(--color-text-black);
-  position: absolute;
-  top: calc(var(--index) * 55);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_play {
-  color: var(--color-text-white);
-  background: var(--color-text-accent);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  cursor: pointer;
-  text-wrap: nowrap;
-  padding: 10px 40px;
-  border-radius: 50px;
-  border: 1px solid transparent;
-  text-transform: uppercase;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  position: absolute;
-  top: calc(var(--index) * 70);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_number {
-  color: var(--color-text-grey);
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_logo {
-  position: absolute;
-  top: calc(var(--index) * 4);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.m-main .seasons-section .seasons_series .seasons_series_all_active {
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
-}
-.m-main .seasons-section .seasons_series .seasons_series_all_active:hover .seasons_series_all_preview {
-  opacity: 0;
-}
-.m-main .seasons-section .seasons_series .seasons_series_1 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../../media/img/episodes_preview/1.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../media/img/episodes_preview/1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
-  width: 33.3333333333vw;
-}
-.m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_title {
-  opacity: 1;
-}
-.m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_paragraph {
-  opacity: 1;
-}
-.m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_play {
-  opacity: 1;
-}
-.m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_number {
-  opacity: 1;
-}
-.m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_preview {
-  opacity: 0;
-}
-.m-main .seasons-section .seasons_series .seasons_series_2 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/2.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-.m-main .seasons-section .seasons_series .seasons_series_2:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/2.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/2.jpg);
-}
-.m-main .seasons-section .seasons_series .seasons_series_3 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/3.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.m-main .seasons-section .seasons_series .seasons_series_3:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/3.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/3.jpg);
-}
-.m-main .seasons-section .seasons_series .seasons_series_4 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/4.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/4.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.m-main .seasons-section .seasons_series .seasons_series_4:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/4.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/4.jpg);
-}
-.m-main .seasons-section .seasons_series .seasons_series_5 {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/1.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .m-main .reviews-section {
   background: var(--color-text-black);
   padding-top: 700px;
@@ -1103,6 +940,23 @@ body ul {
 .m-main .join-section .join_cards .join-cards_card:first-child .join-cards_card-name {
   font-size: 77px;
 }
+.m-main .join-section .join_cards .join-cards_card .card-name {
+  position: absolute;
+  width: 87%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 40px;
+}
+.m-main .join-section .join_cards .join-cards_card .card-name_hero {
+  background-image: url(../../media/img/pricing_names/superhero.svg);
+}
+.m-main .join-section .join_cards .join-cards_card .card-name_wizard {
+  background-image: url(../../media/img/pricing_names/wizard.svg);
+}
+.m-main .join-section .join_cards .join-cards_card .card-name_winner {
+  background-image: url(../../media/img/pricing_names/winner.svg);
+}
 .m-main .join-section .join_cards .join-cards_card .join-cards_card-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1135,7 +989,7 @@ body ul {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 120px;
+  top: 80px;
 }
 .m-main .join-section .join_cards .join-cards_card .join-cards_card-price {
   font-size: 64px;
@@ -1143,7 +997,7 @@ body ul {
   font-weight: 500;
   position: relative;
   z-index: 2;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 .m-main .join-section .join_cards .join-cards_card .join-cards_card-price span {
   font-size: 20px;
@@ -5529,7 +5383,7 @@ body ul {
     margin-top: 26px;
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+@media only screen and (min-width: 1201px) {
   .container {
     padding: 0 100px;
   }
@@ -5722,13 +5576,13 @@ body ul {
             box-shadow: 0px 4px 12.5px 1px rgba(0, 0, 0, 0.25);
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1110px) {
+@media only screen and (min-width: 1201px) and (min-width: 1110px) {
   .m-main .hero-section .hero_big-pic .hero-mask .hero_big-pic_video {
     -o-object-position: 0px 0;
        object-position: 0px 0;
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+@media only screen and (min-width: 1201px) {
   .m-main .hero-section .hero_scrolldown {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5810,7 +5664,7 @@ body ul {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     color: var(--color-text-white);
-    font-size: 42px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -6005,49 +5859,76 @@ body ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all {
+    text-align: center;
     position: relative;
-    height: calc(var(--index) * 87);
-    padding: 69px 35px 13px 35px;
+  }
+  .m-main .seasons-section .seasons_series .seasons_series_all_logo {
+    margin-top: 30px;
+  }
+  .m-main .seasons-section .seasons_series .seasons_series_all_title {
+    color: var(--color-text-white);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
-    width: 20vw;
+    opacity: 0;
+    text-align: center;
+    text-wrap: nowrap;
+    margin-top: calc(var(--index) * 50);
+    text-transform: uppercase;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_logo {
-    opacity: 0.7;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover {
-    width: 33.3333333333vw;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_title {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_paragraph {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_play {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_number {
+  .m-main .seasons-section .seasons_series .seasons_series_all_paragraph {
     color: var(--color-text-white);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr1 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    padding: 10px 20px 20px 20px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     opacity: 0;
+    width: 380px;
+    -webkit-text-stroke: 0.2px var(--color-text-black);
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr2 {
-    opacity: 0;
+  .m-main .seasons-section .seasons_series .seasons_series_all_play {
+    color: var(--color-text-white);
+    background: var(--color-text-accent);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    text-wrap: nowrap;
+    padding: 10px 40px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_logo {
-    opacity: 1;
+  .m-main .seasons-section .seasons_series .seasons_series_all_number {
+    color: var(--color-text-grey);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview {
+  .m-main .seasons-section .seasons_series .seasons_series_all_preview {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -6067,117 +5948,46 @@ body ul {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_lock {
+  .m-main .seasons-section .seasons_series .seasons_series_all_preview .seasons_series_all_preview_lock {
     margin: 20px 0;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_line {
+  .m-main .seasons-section .seasons_series .seasons_series_all_preview .seasons_series_all_preview_line {
     width: -15px;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
+  .m-main .seasons-section .seasons_series .locked_seasons {
+    width: 17.2413793103vw;
+    height: 90vh;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    position: relative;
+  }
+  .m-main .seasons-section .seasons_series .locked_seasons:hover {
+    width: 33.3333333333vw;
+  }
+  .m-main .seasons-section .seasons_series .locked_seasons:hover .seasons_series_all_number {
     color: var(--color-text-white);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+  }
+  .m-main .seasons-section .seasons_series .locked_seasons .seasons-content {
     opacity: 0;
-    position: absolute;
-    top: calc(var(--index) * 50);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    text-wrap: nowrap;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_paragraph {
-    color: var(--color-text-white);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
-    padding: 7px 30px 0px 30px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
-    opacity: 0;
-    width: 380px;
-    -webkit-text-stroke: 0.2px var(--color-text-black);
-    position: absolute;
-    top: calc(var(--index) * 55);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_play {
-    color: var(--color-text-white);
-    background: var(--color-text-accent);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    cursor: pointer;
-    text-wrap: nowrap;
-    padding: 10px 40px;
-    border-radius: 50px;
-    border: 1px solid transparent;
-    text-transform: uppercase;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    position: absolute;
-    top: calc(var(--index) * 72);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_number {
-    color: var(--color-text-grey);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    position: absolute;
-    left: 50%;
-    bottom: 5%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_logo {
-    position: absolute;
-    top: calc(var(--index) * 4);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all_active {
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all_active:hover .seasons_series_all_preview {
-    opacity: 0;
   }
   .m-main .seasons-section .seasons_series .seasons_series_1 {
+    width: 33.3333333333vw;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/1.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
-    width: 50vw;
-    height: calc(var(--index) * 87);
+    height: 90vh;
+    position: relative;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_logo {
-    opacity: 1;
+  .m-main .seasons-section .seasons_series .seasons_series_1:hover .seasons_series_all_number {
+    color: var(--color-text-white);
   }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_title {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_paragraph {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_play {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_number {
+  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons-content {
     opacity: 1;
   }
   .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_preview {
@@ -6220,6 +6030,10 @@ body ul {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .m-main .seasons-section .seasons_series .seasons_series_5:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/1.jpg);
   }
   .m-main .reviews-section {
     display: none !important;
@@ -6363,12 +6177,12 @@ body ul {
     font-size: calc(var(--index) * 9.5);
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1580px) {
+@media only screen and (min-width: 1201px) and (min-width: 1580px) {
   .m-main .join-section .join_cards .join-cards_card:first-child .join-cards_card-name {
     font-size: calc(var(--index) * 8.3);
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+@media only screen and (min-width: 1201px) {
   .m-main .join-section .join_cards .join-cards_card:not(:first-child) {
     margin-top: 60px;
   }
@@ -6408,24 +6222,24 @@ body ul {
     top: 120px;
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1230px) {
+@media only screen and (min-width: 1201px) and (min-width: 1230px) {
   .m-main .join-section .join_cards .join-cards_card .join-cards_card-name {
     font-size: calc(var(--index) * 9);
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) and (min-width: 1580px) {
+@media only screen and (min-width: 1201px) and (min-width: 1580px) {
   .m-main .join-section .join_cards .join-cards_card .join-cards_card-name {
     font-size: calc(var(--index) * 8.3);
   }
 }
-@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+@media only screen and (min-width: 1201px) {
   .m-main .join-section .join_cards .join-cards_card .join-cards_card-price {
     font-size: 48px;
     color: var(--color-text-white);
     font-weight: 500;
     position: relative;
     z-index: 2;
-    margin-top: 110px;
+    margin-top: 90px;
   }
   .m-main .join-section .join_cards .join-cards_card .join-cards_card-price span {
     font-size: 16px;

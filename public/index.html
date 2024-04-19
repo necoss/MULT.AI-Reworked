@@ -54,8 +54,9 @@
     <!-- PRELOADER -->
     <div id="preloader">
       <div class="loader">
-        <p class="loader_text" id="loader_text"><span class="loader_text_unit" data-count="100">0</span><span>%</span></p>
+        <p class="loader_text" id="loader_text"><span class="loader_text_unit" data-count="100">1</span><span>%</span></p>
         <div class="loader_bar" id="loader_bar"></div>
+        <p class="preloader_descr">mult.ai загружается, пожалуйста подождите</p>
       </div>
     </div>
 
@@ -74,11 +75,11 @@
           <!-- <li><a href="#" class="navigation-right__contacts">Контакты</a></li> -->
 
           <li>
-            <a href="#" class="navigation-right__contacts colored">Оформить подписку</a>
+            <a href="#subscription" class="navigation-right__contacts colored">Оформить подписку</a>
           </li>
 
           <li>
-            <a href="#" class="navigation-right__contacts">Попробовать демо</a>
+            <a href="#demo-collection" class="navigation-right__contacts">Попробовать демо</a>
           </li>
 
           <div class="navigation">
@@ -93,19 +94,19 @@
             <nav class="navigation__nav" role="navigation">
               <ul class="navigation__list">
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link"><span>01.</span>Главная</a>
+                  <a href="./index.html" class="navigation__link"><span>01.</span>Главная</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link"><span>02.</span>Проблема</a>
+                  <a href="#problems" class="navigation__link"><span>02.</span>Проблема</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link"><span>03.</span>Мультики</a>
+                  <a href="#demo-collection" class="navigation__link"><span>03.</span>Мультики</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link"><span>04.</span>Отзывы</a>
+                  <a href="#reviews" class="navigation__link"><span>04.</span>Отзывы</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link"><span>05.</span>Прайс</a>
+                  <a href="#subscription" class="navigation__link"><span>05.</span>Прайс</a>
                 </li>
               </ul>
             </nav>
@@ -138,7 +139,7 @@
       </section>
 
       <!-- Problems Section -->
-      <section class="problems-section">
+      <section class="problems-section" id="problems">
         <div class="container problems-container">
           <h2 class="problems_title">У вас возникали такие мысли:</h2>
 
@@ -165,7 +166,7 @@
               <div class="problems-slider_slide">
                 <div class="problems-slider_comment">
                   <img class="problems-slider_image" src="./public/media/img/emoji/4.png" alt="" />
-                  <p class="problems-slider_comment_text">Я хочу, что бы малыш двигался и развивался, а не сидел на месте</p>
+                  <p class="problems-slider_comment_text">Я хочу, чтобы малыш двигался и развивался, а не сидел на месте</p>
                   <div class="problems-slider_comment_circle"></div>
                   <div class="problems-slider_comment_circle2"></div>
                 </div>
@@ -196,7 +197,9 @@
       <!-- Addiction Section -->
       <section class="addiction-section container">
         <h3 class="addiction_title">У маленьких детей очень быстро развивается дофаминовая зависимость от развлекательного контента!</h3>
-        <p class="addiction_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, cum.</p>
+        <p class="addiction_paragraph">
+          Мы показываем ребенку обучающий мультфильм, после чего AI через камеру проверяет, как малыш выполняет задания. Так ребенок активно участвует в обучении, не просто смотря, но и двигаясь.
+        </p>
 
         <article class="addiction-article_textblock transition_gsap">
           <p class="addiction-article_text">До ютуба</p>
@@ -204,6 +207,58 @@
         </article>
 
         <video class="addiction_video" src="./public/media/video/before-after-youtube.mp4" loop autoplay muted></video>
+      </section>
+
+      <!-- Learn Section -->
+      <section class="learn-section container">
+        <h1 class="learn-title">Вместе с MULT.AI ваш ребенок изучит:</h1>
+
+        <div class="learn-block">
+          <div class="learn-block_row">
+
+            <div class="learn-block_card">
+              <img src="./public/media/img/icons/learn_icons/eyes.png" alt="">
+              <h2 class="learn-block_card_title">Части тела</h2>
+              <!-- <p class="learn-block_card_subtitle">Ваш малыш узнает, зачем нужны разные части тела, а также сможет сыграть в игру, где ему нужно будет самому показать носик, ушки и глазки.</p> -->
+            </div>
+
+            <div class="learn-block_card">
+              <img src="./public/media/img/icons/learn_icons/emotions.png" width="60px" alt="">
+              <h2 class="learn-block_card_title">Эмоции</h2>
+              <!-- <p class="learn-block_card_subtitle">Ребенок научится распознавать и называть различные эмоции, а также сможет узнать, как выглядят радость, грусть и удивление на лицах других людей.</p> -->
+            </div>
+
+            <div class="learn-block_card">
+              <img src="./public/media/img/icons/learn_icons/colors.png" width="60px" alt="">
+              <h2 class="learn-block_card_title">Цвета</h2>
+              <!-- <p class="learn-block_card_subtitle">Малыш изучит основные цвета и их названия, играя в интерактивные задания на распознавание и называние цветов в окружающем мире.</p> -->
+            </div>
+
+          </div>
+
+          <div class="learn-block_row">
+
+            <div class="learn-block_card">
+              <img src="./public/media/img/icons/learn_icons/figures.png" alt="">
+              <h2 class="learn-block_card_title">Формы</h2>
+              <!-- <p class="learn-block_card_subtitle">Ваш ребенок познакомится с различными геометрическими формами, такими как круг, квадрат и треугольник, и научится их идентифицировать в повседневных предметах.</p> -->
+            </div>
+
+            <div class="learn-block_card">
+              <img src="./public/media/img/icons/learn_icons/pets.png" width="60px" alt="">
+              <h2 class="learn-block_card_title">Животных</h2>
+              <!-- <p class="learn-block_card_subtitle">Ребенок узнает о разных животных, их звуках и особенностях, а также сможет поучаствовать в игре на угадывание животных по изображению или звуку.</p> -->
+            </div>
+
+            <div class="learn-block_card">
+              <img src="./public/media/img/icons/learn_icons/numbers.png" alt="">
+              <h2 class="learn-block_card_title">Счёт</h2>
+              <!-- <p class="learn-block_card_subtitle">Малыш начнет осваивать основы счёта, участвуя в заданиях на добавление и вычитание простых чисел в игровой форме.</p> -->
+            </div>
+
+          </div>
+        </div>
+
       </section>
 
       <!-- Timeline Section -->
@@ -378,34 +433,48 @@
       <!-- Episodes Section -->
       <section class="episodes-section container">
         <h5 class="episodes_title">Отправляйтесь в путешествие с любимыми героями!</h5>
-        <p class="episodes_subtitle">Какой-то супер красивый текст, который будет описывать концепцию мультиков, что и как нужно смотреть</p>
+        <p class="episodes_subtitle">
+          Мы разработали интерактивные AI мультики, которые научат взаимодействовать, двигаться и играть, а не просто смотреть в монитор! Цвета, части тела, эмоции, формы, цифры, слова и многое
+          другое.
+        </p>
+
+        <p class="episodes_subtitle">
+          Малыш смотрит мультфильм -> получает задание, связанное с темой мультика -> через камеру и микрофон взаимодействует с мультфильмом
+        </p>
         <video src="./public/media/video/seasons-sec_vid.mp4" muted autoplay loop class="episodes_transition-screen"></video>
       </section>
 
       <!-- Seasons Section -->
-      <section class="seasons-section">
+      <section class="seasons-section" id="demo-collection">
         <h6 class="seasons_title">НАША КОЛЛЕКЦИЯ</h6>
 
         <div class="seasons_series">
-          <div class="seasons_series_1 seasons_series_all seasons_series_all_active">
+          <div class="seasons_series_1 seasons_series_all_active"> <!-- ------------------------->
+
             <img class="seasons_series_all_logo" src="./public/media/img/icons/series_icons/first-ico_apple.svg" alt="Apple icon" />
-            <h6 class="seasons_series_all_title">Элли в стране чудес</h6>
-            <p class="seasons_series_all_paragraph">
-              Та та та, суперское описание предстоящей истории. Лорем ипсуп чар та та та та та т ат ат а. Та та та, суперское описание предстоящей истории. Лорем ипсуп чар та та та та та т ат ат а. Та
-              та та, суперское описание предстоящей истории. Лорем ипсуп чар та та та та та т ат ат а. Та та та, суперское описание предстоящей истории. Лорем ипсуп чар та та та та та т ат ат а
+            <h6 class="seasons_series_all_title seasons-content">Части тела</h6>
+            <p class="seasons_series_all_paragraph seasons-content">
+              Ваш малыш узнает, зачем нужны разные части тела, а также сможет сыграть в игру, где ему нужно будет самому показать носик, ушки и глазки.
             </p>
-            <button class="seasons_series_all_play">Попробовать Демо!</button>
+            <button class="seasons_series_all_play seasons-content">Попробовать Демо!</button>
             <p class="seasons_series_all_number">01</p>
 
             <div class="seasons_series_all_preview">
               <img class="seasons_series_all_preview_line" src="./public/media/img/icons/series_icons/Line-preview_white.svg" alt="Line" />
-              <img class="seasons_series_all_preview_lock" src="./public/media/img/icons/series_icons/lock-ico_white.svg" alt="Lock" />
+              <img class="seasons_series_all_preview_lock" src="./public/media/img/icons/series_icons/lock-ico_unlocked-whjite.svg" alt="Lock" />
               <img class="seasons_series_all_preview_line" src="./public/media/img/icons/series_icons/Line-preview_white.svg" alt="Line" />
             </div>
+
           </div>
 
-          <div class="seasons_series_2 seasons_series_all">
+          <div class="seasons_series_2 seasons_series_all locked_seasons"> <!-- ------------------------->
+
             <img class="seasons_series_all_logo" src="./public/media/img/icons/series_icons/sec-ico_castle.svg" alt="Apple icon" />
+            <h6 class="seasons_series_all_title seasons-content">Эмоции</h6>
+            <p class="seasons_series_all_paragraph seasons-content">
+              Ребенок научится распознавать и называть различные эмоции, а также сможет узнать, как выглядят радость, грусть и удивление на лицах других людей.
+            </p>
+            <button class="seasons_series_all_play seasons-content">Скоро!</button>
             <p class="seasons_series_all_number">02</p>
 
             <div class="seasons_series_all_preview">
@@ -413,10 +482,17 @@
               <img class="seasons_series_all_preview_lock" src="./public/media/img/icons/series_icons/lock-ico_white.svg" alt="Lock" />
               <img class="seasons_series_all_preview_line" src="./public/media/img/icons/series_icons/Line-preview_white.svg" alt="Line" />
             </div>
+
           </div>
 
-          <div class="seasons_series_3 seasons_series_all">
+          <div class="seasons_series_3 seasons_series_all locked_seasons"> <!-- ------------------------->
+
             <img class="seasons_series_all_logo" src="./public/media/img/icons/series_icons/third-ico_forest.svg" alt="Apple icon" />
+            <h6 class="seasons_series_all_title seasons-content">Цвета</h6>
+            <p class="seasons_series_all_paragraph seasons-content">
+              Малыш изучит основные цвета и их названия, играя в интерактивные задания на распознавание и называние цветов в окружающем мире.
+            </p>
+            <button class="seasons_series_all_play seasons-content">Скоро!</button>
             <p class="seasons_series_all_number">03</p>
 
             <div class="seasons_series_all_preview">
@@ -424,10 +500,17 @@
               <img class="seasons_series_all_preview_lock" src="./public/media/img/icons/series_icons/lock-ico_white.svg" alt="Lock" />
               <img class="seasons_series_all_preview_line" src="./public/media/img/icons/series_icons/Line-preview_white.svg" alt="Line" />
             </div>
+
           </div>
 
-          <div class="seasons_series_4 seasons_series_all">
+          <div class="seasons_series_4 seasons_series_all locked_seasons"> <!-- ------------------------->
+
             <img class="seasons_series_all_logo" src="./public/media/img/icons/series_icons/forth-ico_kitty.svg" alt="Apple icon" />
+            <h6 class="seasons_series_all_title seasons-content">Формы</h6>
+            <p class="seasons_series_all_paragraph seasons-content">
+              Ваш ребенок познакомится с различными геометрическими формами, такими как круг, квадрат и треугольник, и научится их идентифицировать в повседневных предметах.
+            </p>
+            <button class="seasons_series_all_play seasons-content">Скоро!</button>
             <p class="seasons_series_all_number">04</p>
 
             <div class="seasons_series_all_preview">
@@ -435,10 +518,17 @@
               <img class="seasons_series_all_preview_lock" src="./public/media/img/icons/series_icons/lock-ico_white.svg" alt="Lock" />
               <img class="seasons_series_all_preview_line" src="./public/media/img/icons/series_icons/Line-preview_white.svg" alt="Line" />
             </div>
+
           </div>
 
-          <div class="seasons_series_5 seasons_series_all">
+          <div class="seasons_series_5 seasons_series_all locked_seasons"> <!-- ------------------------->
+
             <img class="seasons_series_all_logo" src="./public/media/img/icons/series_icons/fifth-ico_love.svg" alt="Apple icon" />
+            <h6 class="seasons_series_all_title seasons-content">Животные</h6>
+            <p class="seasons_series_all_paragraph seasons-content">
+              Ребенок узнает о разных животных, их звуках и особенностях, а также сможет поучаствовать в игре на угадывание животных по изображению или звуку.
+            </p>
+            <button class="seasons_series_all_play seasons-content">Скоро!</button>
             <p class="seasons_series_all_number">05</p>
 
             <div class="seasons_series_all_preview">
@@ -446,7 +536,9 @@
               <img class="seasons_series_all_preview_lock" src="./public/media/img/icons/series_icons/lock-ico_white.svg" alt="Lock" />
               <img class="seasons_series_all_preview_line" src="./public/media/img/icons/series_icons/Line-preview_white.svg" alt="Line" />
             </div>
+
           </div>
+
         </div>
       </section>
 
@@ -456,7 +548,7 @@
       </section>
 
       <!-- Reviews Section -->
-      <section class="reviews-section">
+      <section class="reviews-section" id="reviews">
         <article class="reviews_article">
           <h6 class="reviews-article_title">Только позитивные эмоции!</h6>
           <p class="reviews-article_paragraph">
@@ -480,30 +572,8 @@
           <div class="reviews-comments_comment">
             <div class="reviews-comments_video"></div>
             <img src="./public/media/img/icons/rating.svg" alt="Rating" class="reviews-comments_rating" />
-            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
-            <p class="reviews-comments_paragraph">
-              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare. Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall vipor, och mada.
-            </p>
-            <p class="reviews-comments_date">04.03.2024</p>
-          </div>
-
-          <div class="reviews-comments_comment">
-            <div class="reviews-comments_video"></div>
-            <img src="./public/media/img/icons/rating.svg" alt="Rating" class="reviews-comments_rating" />
-            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
-            <p class="reviews-comments_paragraph">
-              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare. Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall vipor, och mada.
-            </p>
-            <p class="reviews-comments_date">04.03.2024</p>
-          </div>
-
-          <div class="reviews-comments_comment">
-            <div class="reviews-comments_video"></div>
-            <img src="./public/media/img/icons/rating.svg" alt="Rating" class="reviews-comments_rating" />
-            <h6 class="reviews-comments_title">“Я в восторге!!”</h6>
-            <p class="reviews-comments_paragraph">
-              Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare. Nirat eulingar labeligen. Sode gamyning. Asäbulig pseudoden ifall vipor, och mada.
-            </p>
+            <h6 class="reviews-comments_title">“У меня появилось свободное время!”</h6>
+            <p class="reviews-comments_paragraph">Lörem ipsum vel dekande av sopyrat inte metroitet att nätläkare. Nirat eulingar labeligen. Sode gamyning</p>
             <p class="reviews-comments_date">04.03.2024</p>
           </div>
 
@@ -520,7 +590,7 @@
       </section>
 
       <!-- Join Section -->
-      <section class="join-section container">
+      <section class="join-section container" id="subscription">
         <h6 class="join_title">Присоединяйтесь к MULT.AI!</h6>
 
         <div class="join_cards">
@@ -530,7 +600,8 @@
               <p class="join-cards_card-top_plan-descr">Сделайте первый шаг в мир MULT.AI</p>
             </div>
 
-            <h3 class="join-cards_card-name">СУПЕРГЕРОЙ</h3>
+            <div class="card-name card-name_hero"></div>
+            <!-- <h3 class="join-cards_card-name">СУПЕРГЕРОЙ</h3> -->
             <h4 class="join-cards_card-price">$3.99<span>/mo.</span></h4>
 
             <div class="join-cards_card-advantages">
@@ -557,7 +628,8 @@
               <p class="join-cards_card-top_plan-descr">Углeбленное погружение в MULT.AI</p>
             </div>
 
-            <h3 class="join-cards_card-name">ВОЛШЕБНИК</h3>
+            <div class="card-name card-name_wizard"></div>
+            <!-- <h3 class="join-cards_card-name">ВОЛШЕБНИК</h3> -->
             <h4 class="join-cards_card-price">$6.99<span>/mo.</span></h4>
 
             <div class="join-cards_card-advantages">
@@ -584,7 +656,8 @@
               <p class="join-cards_card-top_plan-descr">Получите максимум от мира MULT.AI</p>
             </div>
 
-            <h3 class="join-cards_card-name">ПОБЕДИТЕЛЬ</h3>
+            <div class="card-name card-name_winner"></div>
+            <!-- <h3 class="join-cards_card-name">ПОБЕДИТЕЛЬ</h3> -->
             <h4 class="join-cards_card-price">$9.99<span>/mo.</span></h4>
 
             <div class="join-cards_card-advantages">

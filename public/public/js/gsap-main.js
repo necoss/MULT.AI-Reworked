@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   console.log(document.documentElement.clientWidth)
 
-  if (document.documentElement.clientWidth >= 1400) {
+  if (document.documentElement.clientWidth >= 1200) {
     headerAnimation();
     addictionAnimation();
     timelineAnimation();
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       // console.log(window.innerWidth)
       // console.log('1')
     } else {
-      thoughtsConst.to(".problems_title", { x: "-1%", duration: 1 });
+      thoughtsConst.to(".problems_title", { x: "-5%", duration: 1 });
       // console.log(window.innerWidth)
       // console.log('2')
     }
@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         },
       })
       .to(".episodes_transition-screen", {
-        scale: 4,
+        scale: 2.7,
         ease: "none",
         borderRadius: "0%",
       });

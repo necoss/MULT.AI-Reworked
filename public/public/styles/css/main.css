@@ -1400,7 +1400,7 @@ body ul {
     background: var(--color-text-black);
     border-radius: 0 0 30px 30px;
     z-index: 10 !important;
-    padding-bottom: calc(var(--index) * 20);
+    padding-bottom: calc(var(--index) * 0);
   }
   .m-main .problems-section .problems-container {
     display: -webkit-box;
@@ -1420,7 +1420,7 @@ body ul {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     color: var(--color-text-white);
-    font-size: 16px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -1497,7 +1497,7 @@ body ul {
     background: var(--color-text-accent);
   }
   .m-main .addiction-section {
-    margin-top: calc(var(--index) * 40);
+    margin-top: calc(var(--index) * 20);
   }
   .m-main .addiction-section .addiction_title {
     color: var(--color-text-black);
@@ -1538,8 +1538,77 @@ body ul {
     height: calc(var(--index) * 20);
     border-radius: 20px;
   }
+  .m-main .learn-section {
+    margin-top: 250px;
+    text-align: center;
+  }
+  .m-main .learn-section .learn-title {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr {
+    padding-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .m-main .learn-section .learn-descr .tutorial-text {
+    font-size: 9px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr .tutorial-arrow {
+    text-align: center;
+    width: 30px;
+    rotate: -90deg;
+    padding: 0 5px;
+  }
+  .m-main .learn-section .learn-block {
+    margin-top: 30px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 20px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background: #e1e3ee;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+    box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card img {
+    width: 30px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_title {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_subtitle {
+    padding-top: 10px;
+    color: var(--color-text-grey);
+  }
   .m-main .episodes-section {
-    margin-top: 600px;
+    margin-top: 300px;
     padding-bottom: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1617,77 +1686,23 @@ body ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all {
+    text-align: center;
     position: relative;
-    height: calc(var(--index) * 30);
-    padding: 69px 35px 13px 35px;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    width: 100%;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_logo {
-    opacity: 0.7;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover {
-    width: 100%;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_title {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_paragraph {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_play {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_number {
-    color: var(--color-text-white);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr1 {
-    opacity: 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr2 {
-    opacity: 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview {
-    position: absolute;
-    left: 50%;
-    top: 55%;
-    -webkit-transform: translate(-55%, -50%);
-            transform: translate(-55%, -50%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_lock {
-    margin: 20px 0;
+  .m-main .seasons-section .seasons_series .seasons_series_all_logo {
+    margin-top: 30px;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_line {
-    display: none !important;
-    width: -10px;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
+  .m-main .seasons-section .seasons_series .seasons_series_all_title {
     color: var(--color-text-white);
     font-size: 32px;
     font-style: normal;
@@ -1696,46 +1711,25 @@ body ul {
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     opacity: 0;
-    position: absolute;
-    top: calc(var(--index) * 45);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    text-align: center;
     text-wrap: nowrap;
+    margin-top: 250px;
+    text-transform: uppercase;
   }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) and (max-width: 390px) {
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
-    top: calc(var(--index) * 35);
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_paragraph {
+  .m-main .seasons-section .seasons_series .seasons_series_all_paragraph {
+    text-align: center;
     color: var(--color-text-white);
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
-    padding: 7px 30px 0px 30px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     opacity: 0;
-    width: 380px;
+    padding: 15px 20px;
     -webkit-text-stroke: 0.2px var(--color-text-black);
-    position: absolute;
-    top: calc(var(--index) * 50);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) and (max-width: 390px) {
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_paragraph {
-    top: calc(var(--index) * 42);
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_play {
+  .m-main .seasons-section .seasons_series .seasons_series_all_play {
     color: var(--color-text-white);
     background: var(--color-text-accent);
     font-size: 16px;
@@ -1750,20 +1744,8 @@ body ul {
     text-transform: uppercase;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
-    position: absolute;
-    top: calc(var(--index) * 71);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) and (max-width: 390px) {
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_play {
-    top: calc(var(--index) * 69);
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_number {
+  .m-main .seasons-section .seasons_series .seasons_series_all_number {
     color: var(--color-text-grey);
     font-size: 32px;
     font-style: normal;
@@ -1777,42 +1759,67 @@ body ul {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_logo {
+  .m-main .seasons-section .seasons_series .seasons_series_all_preview {
     position: absolute;
-    top: calc(var(--index) * 4);
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all_active {
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
+  .m-main .seasons-section .seasons_series .seasons_series_all_preview .seasons_series_all_preview_lock {
+    margin: 20px 0;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_all_active:hover .seasons_series_all_preview {
+  .m-main .seasons-section .seasons_series .seasons_series_all_preview .seasons_series_all_preview_line {
+    width: -15px;
+    display: none;
+  }
+  .m-main .seasons-section .seasons_series .locked_seasons {
+    width: 100%;
+    height: 25vh;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    position: relative;
+  }
+  .m-main .seasons-section .seasons_series .locked_seasons:hover {
+    height: 33.3333333333vh;
+  }
+  .m-main .seasons-section .seasons_series .locked_seasons:hover .seasons_series_all_number {
+    color: var(--color-text-white);
+  }
+  .m-main .seasons-section .seasons_series .locked_seasons .seasons-content {
     opacity: 0;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   .m-main .seasons-section .seasons_series .seasons_series_1 {
+    width: 100%;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/1.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;
-    width: 100%;
-    height: calc(var(--index) * 87);
+    height: 66.6666666667vh;
+    position: relative;
   }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_logo {
-    opacity: 1;
+  .m-main .seasons-section .seasons_series .seasons_series_1:hover .seasons_series_all_number {
+    color: var(--color-text-white);
   }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_title {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_paragraph {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_play {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_number {
+  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons-content {
     opacity: 1;
   }
   .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_preview {
@@ -1856,107 +1863,9 @@ body ul {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  .m-main .reviews-section {
-    display: none !important;
-    overflow-x: hidden;
-    background: var(--color-text-black);
-    padding-top: 700px;
-    padding: 50px 0 calc(var(--index) * 50) 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    width: 100%;
-  }
-  .m-main .reviews-section .reviews_article {
-    padding-left: 0px;
-    text-align: center;
-    width: 100%;
-    padding-top: 150px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_title {
-    color: var(--color-text-white);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    max-width: 604px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_paragraph {
-    color: var(--color-text-grey);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding: 40px 30px 0px 30px;
-    margin-bottom: 80px;
-    max-width: 575px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_button {
-    color: var(--color-button-lightgrey);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    border-radius: 44px;
-    background: var(--color-text-accent);
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(139, 51, 253, 0.6431372549);
-            box-shadow: 0px 4px 4px 0px rgba(139, 51, 253, 0.6431372549);
-    padding: 20px 66px;
-  }
-  .m-main .reviews-section .reviews_comments {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    left: calc(var(--index) * 130);
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment {
-    padding: 30px 28px;
-    width: 320px;
-    height: 100%;
-    border-radius: 10px;
-    background: #e4e6ef;
-    -webkit-filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-            filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-    margin-right: 250px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment:nth-child(2n) {
-    margin-top: 100px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_video {
-    border-radius: 10px;
-    background: #d9d9d9;
-    width: 100%;
-    height: 135px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_rating {
-    padding-top: 10px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_title {
-    color: var(--color-text-black);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding-top: 20px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_paragraph {
-    color: var(--color-text-grey);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding-top: 20px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_date {
-    color: var(--color-text-grey);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding-top: 20px;
+  .m-main .seasons-section .seasons_series .seasons_series_5:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/1.jpg);
   }
   .m-main .join-section {
     margin-top: 100px;
@@ -2573,6 +2482,75 @@ body ul {
     height: calc(var(--index) * 25);
     border-radius: 20px;
   }
+  .m-main .learn-section {
+    margin-top: 250px;
+    text-align: center;
+  }
+  .m-main .learn-section .learn-title {
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr {
+    padding-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .m-main .learn-section .learn-descr .tutorial-text {
+    font-size: 10px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr .tutorial-arrow {
+    text-align: center;
+    width: 30px;
+    rotate: -90deg;
+    padding: 0 5px;
+  }
+  .m-main .learn-section .learn-block {
+    margin-top: 40px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 20px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card {
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    background: #e1e3ee;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+    box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card img {
+    width: 40px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_title {
+    padding-top: 10px;
+    font-size: 16px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_subtitle {
+    padding-top: 10px;
+    color: var(--color-text-grey);
+  }
   .m-main .episodes-section {
     margin-top: 600px;
     padding-bottom: 500px;
@@ -2869,108 +2847,6 @@ body ul {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  .m-main .reviews-section {
-    overflow-x: hidden;
-    display: none !important;
-    background: var(--color-text-black);
-    padding-top: 700px;
-    padding: 50px 0 calc(var(--index) * 50) 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    width: 100%;
-  }
-  .m-main .reviews-section .reviews_article {
-    padding-left: 0px;
-    text-align: center;
-    width: 100%;
-    padding-top: 150px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_title {
-    color: var(--color-text-white);
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    max-width: 604px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_paragraph {
-    color: var(--color-text-grey);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding: 40px 30px 0px 30px;
-    margin-bottom: 80px;
-    max-width: 575px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_button {
-    color: var(--color-button-lightgrey);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    border-radius: 44px;
-    background: var(--color-text-accent);
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(139, 51, 253, 0.6431372549);
-            box-shadow: 0px 4px 4px 0px rgba(139, 51, 253, 0.6431372549);
-    padding: 20px 66px;
-  }
-  .m-main .reviews-section .reviews_comments {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    left: calc(var(--index) * 130);
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment {
-    padding: 30px 28px;
-    width: 320px;
-    height: 100%;
-    border-radius: 10px;
-    background: #e4e6ef;
-    -webkit-filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-            filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-    margin-right: 250px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment:nth-child(2n) {
-    margin-top: 100px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_video {
-    border-radius: 10px;
-    background: #d9d9d9;
-    width: 100%;
-    height: 135px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_rating {
-    padding-top: 10px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_title {
-    color: var(--color-text-black);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding-top: 20px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_paragraph {
-    color: var(--color-text-grey);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding-top: 20px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_date {
-    color: var(--color-text-grey);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding-top: 20px;
   }
   .m-main .join-section {
     margin-top: 200px;
@@ -3651,6 +3527,75 @@ body ul {
     max-width: 100%;
     height: calc(var(--index) * 40);
     border-radius: 20px;
+  }
+  .m-main .learn-section {
+    margin-top: 250px;
+    text-align: center;
+  }
+  .m-main .learn-section .learn-title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr {
+    padding-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .m-main .learn-section .learn-descr .tutorial-text {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr .tutorial-arrow {
+    text-align: center;
+    width: 30px;
+    rotate: -90deg;
+    padding: 0 5px;
+  }
+  .m-main .learn-section .learn-block {
+    margin-top: 30px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 20px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background: #e1e3ee;
+    padding: 30px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+    box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card img {
+    width: 50px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_title {
+    padding-top: 10px;
+    font-size: 26px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_subtitle {
+    padding-top: 10px;
+    color: var(--color-text-grey);
   }
   .m-main .episodes-section {
     margin-top: 600px;
@@ -4669,6 +4614,75 @@ body ul {
     max-width: 100%;
     height: calc(var(--index) * 60);
     border-radius: 20px;
+  }
+  .m-main .learn-section {
+    margin-top: 250px;
+    text-align: center;
+  }
+  .m-main .learn-section .learn-title {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr {
+    padding-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .m-main .learn-section .learn-descr .tutorial-text {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .m-main .learn-section .learn-descr .tutorial-arrow {
+    text-align: center;
+    width: 30px;
+    rotate: -90deg;
+    padding: 0 5px;
+  }
+  .m-main .learn-section .learn-block {
+    margin-top: 30px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 20px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card {
+    text-align: center;
+    width: 260px;
+    height: 240px;
+    background: #e1e3ee;
+    padding: 50px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+    box-shadow: 0px 15px 31px -11px rgb(224, 224, 224);
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card img {
+    width: 50px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_title {
+    padding-top: 10px;
+    font-size: 28px;
+  }
+  .m-main .learn-section .learn-block .learn-block_row .learn-block_card .learn-block_card_subtitle {
+    padding-top: 10px;
+    color: var(--color-text-grey);
   }
   .m-main .episodes-section {
     margin-top: 600px;
@@ -6254,528 +6268,5 @@ body ul {
     font-weight: 300;
     line-height: normal;
     margin-top: 26px;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  .m-header .header-navigation .navigation_right .navigation-right__music-button {
-    margin-right: 40px;
-  }
-  .m-header .header-navigation .navigation_right .navigation .navigation__button {
-    top: calc(var(--index) * 1.2);
-  }
-  .m-header .header-navigation .navigation_right .navigation .navigation__background {
-    top: calc(var(--index) * 1.3);
-  }
-  .m-header .header-navigation .navigation_right .navigation .navigation__icon {
-    margin-top: calc(var(--index) * 0.3);
-    margin-right: calc(var(--index) * -1.6);
-  }
-  .m-main .hero-section .hero_title {
-    font-size: 51px;
-  }
-  .m-main .hero-section .hero_scrolldown {
-    padding-top: 15px;
-    padding-bottom: calc(var(--index) * 15);
-  }
-  .m-main .timeline-section .timeline_graph {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 100px;
-  }
-  .m-main .timeline-section .timeline_graph .timeline .timeline_section .timeline_content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 0;
-    position: relative;
-    z-index: 10;
-    border-radius: 20px;
-  }
-  .m-main .timeline-section .timeline_graph .timeline .timeline_section .timeline_content .content_section {
-    width: 400px;
-    background: var(--color-text-black);
-    padding: 20px;
-    border-radius: 20px;
-    height: calc(var(--index) * 40);
-  }
-  .m-main .timeline-section .timeline_graph .timeline .timeline_section .timeline_content .content_section:not(:last-child) {
-    margin-right: 50px;
-  }
-  .m-main .timeline-section .timeline_graph .timeline .timeline_section .timeline_content .content_section .content-mult_title {
-    color: var(--color-text-black);
-    -webkit-transition: 0.6s ease;
-    transition: 0.6s ease;
-    font-size: 30px;
-    background-color: var(--color-text-white);
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: 20px;
-    padding: 5px 0;
-  }
-  .m-main .timeline-section .timeline_graph .timeline .timeline_section .timeline_content .content_section .timeline_paragraph {
-    text-align: start;
-    color: var(--color-text-white);
-    font-size: 16px;
-    padding-top: 30px;
-  }
-  .m-main .seasons-section {
-    position: relative;
-    z-index: 10;
-    background: var(--color-text-black);
-  }
-  .m-main .seasons-section .seasons_title {
-    text-align: center;
-    color: var(--color-text-white);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    position: relative;
-    padding: 36px;
-  }
-  .m-main .seasons-section .seasons_title::before {
-    display: block;
-    width: 430px;
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid var(--color-text-white);
-    top: 50%;
-    right: calc(var(--index) * 5);
-    border-radius: 100%;
-  }
-  .m-main .seasons-section .seasons_title::after {
-    display: block;
-    width: 430px;
-    content: "";
-    position: absolute;
-    border-bottom: 1px solid var(--color-text-white);
-    top: 50%;
-    left: calc(var(--index) * 5);
-    border-radius: 100%;
-  }
-  .m-main .seasons-section .seasons_series {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all {
-    position: relative;
-    height: calc(var(--index) * 87);
-    padding: 69px 65px 13px 65px;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    width: 25vw;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover {
-    width: 33.3333333333vw;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_title {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_paragraph {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_play {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_number {
-    color: var(--color-text-white);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr1 {
-    opacity: 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all:hover .seasons_series_all_hr2 {
-    opacity: 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview {
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_preview .seasons_series_all_preview_lock {
-    margin: 20px 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_title {
-    color: var(--color-text-white);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    opacity: 0;
-    position: absolute;
-    top: calc(var(--index) * 50);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    text-wrap: nowrap;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_paragraph {
-    color: #d9d9d9;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 130%;
-    padding-top: 7px;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    opacity: 0;
-    width: 300px;
-    position: absolute;
-    top: calc(var(--index) * 55);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_play {
-    color: var(--color-text-white);
-    background: var(--color-text-accent);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    cursor: pointer;
-    text-wrap: nowrap;
-    padding: 10px 40px;
-    border-radius: 50px;
-    border: 1px solid transparent;
-    text-transform: uppercase;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    position: absolute;
-    top: calc(var(--index) * 72);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_number {
-    color: var(--color-text-grey);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-    position: absolute;
-    left: 50%;
-    bottom: 5%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all .seasons_series_all_logo {
-    position: absolute;
-    top: calc(var(--index) * 4);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all_active {
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_all_active:hover .seasons_series_all_preview {
-    opacity: 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../../media/img/episodes_preview/1.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../media/img/episodes_preview/1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: darken;
-    width: 33.3333333333vw;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_title {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_paragraph {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_play {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_number {
-    opacity: 1;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_1 .seasons_series_all_preview {
-    opacity: 0;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_2 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/2.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_2:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/2.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/2.jpg);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_3 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/3.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_3:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/3.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/3.jpg);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_4 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/4.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_4:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../../media/img/episodes_preview/4.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/4.jpg);
-  }
-  .m-main .seasons-section .seasons_series .seasons_series_5 {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.8))), url(../../media/img/episodes_preview/1.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .m-main .reviews-section {
-    background: var(--color-text-black);
-    padding-top: 700px;
-    padding: 195px 0 calc(var(--index) * 50) 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    width: 260%;
-  }
-  .m-main .reviews-section .reviews_article {
-    padding-left: 100px;
-    width: 704px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_title {
-    color: var(--color-text-white);
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    max-width: 604px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_paragraph {
-    color: var(--color-text-grey);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding-top: 40px;
-    margin-bottom: 80px;
-    max-width: 575px;
-  }
-  .m-main .reviews-section .reviews_article .reviews-article_button {
-    color: var(--color-button-lightgrey);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    border-radius: 44px;
-    background: var(--color-text-accent);
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(139, 51, 253, 0.6431372549);
-            box-shadow: 0px 4px 4px 0px rgba(139, 51, 253, 0.6431372549);
-    padding: 20px 66px;
-  }
-  .m-main .reviews-section .reviews_comments {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: absolute;
-    left: calc(var(--index) * 190);
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment {
-    padding: 30px 28px;
-    width: 455px;
-    height: 550px;
-    border-radius: 10px;
-    background: #e4e6ef;
-    -webkit-filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-            filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-    margin-right: 250px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment:nth-child(2n) {
-    margin-top: 100px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_video {
-    border-radius: 10px;
-    background: #d9d9d9;
-    width: 399px;
-    height: 195px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_rating {
-    padding-top: 10px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_title {
-    color: var(--color-text-black);
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    padding-top: 20px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_paragraph {
-    color: var(--color-text-grey);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding-top: 20px;
-  }
-  .m-main .reviews-section .reviews_comments .reviews-comments_comment .reviews-comments_date {
-    color: var(--color-text-grey);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    padding-top: 20px;
-  }
-  .m-main .join-section .join_title {
-    text-align: center;
-    color: var(--color-text-black);
-    font-size: 70px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
-  }
-  .m-main .join-section .join_cards {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 50px;
-  }
-  .m-main .join-section .join_cards .join-cards_card {
-    background: var(--color-text-black);
-    width: calc(var(--index) * 40);
-    height: 600px;
-    padding: 30px;
-    border-radius: 20px;
-    position: relative;
-  }
-  .m-main .join-section .join_cards .join-cards_card:first-child .join-cards_card-name {
-    font-size: calc(var(--index) * 4.9);
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-top .join-cards_card-top_plan {
-    font-size: 12px;
-    background: var(--color-text-white);
-    color: var(--color-text-black);
-    padding: 11px 20px;
-    border-radius: 20px;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-top .join-cards_card-top_plan-descr {
-    color: var(--color-text-grey);
-    font-size: 12px;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-name {
-    color: #313131;
-    font-size: calc(var(--index) * 4.5);
-    font-weight: 700;
-    text-wrap: nowrap;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    top: 130px;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-price {
-    font-size: 64px;
-    color: var(--color-text-white);
-    font-weight: 500;
-    position: relative;
-    z-index: 2;
-    margin-top: 100px;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-price span {
-    font-size: 20px;
-    font-weight: 300;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages {
-    margin-top: 20px;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .join-cards_card-advantages-advantage {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--color-text-white);
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .join-cards_card-advantages-advantage:not(:last-child) {
-    margin-bottom: 15px;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .join-cards_card-advantages-advantage span {
-    margin-right: 5px;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-advantages .advantage-tick {
-    text-decoration: underline;
-  }
-  .m-main .join-section .join_cards .join-cards_card .join-cards_card-button {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    padding: 20px 130px;
-    bottom: 40px;
-    background: var(--color-text-white);
-    color: var(--color-text-black);
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 50px;
   }
 }

@@ -1805,7 +1805,7 @@ body {
       background: var(--color-text-black);
       border-radius: 0 0 30px 30px;
       z-index: 10 !important;
-      padding-bottom: calc(var(--index) * 20);
+      padding-bottom: calc(var(--index) * 0);
 
       .problems-container {
         display: flex;
@@ -1819,7 +1819,7 @@ body {
         top: calc(var(--index) * 40);
         transform: translateX(-50%);
         color: var(--color-text-white);
-        font-size: 16px;
+        font-size: 26px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -1899,7 +1899,7 @@ body {
     // Addiction Section
     .addiction-section {
       // display: none;
-      margin-top: calc(var(--index) * 40);
+      margin-top: calc(var(--index) * 20);
 
       .addiction_title {
         color: var(--color-text-black);
@@ -1942,10 +1942,80 @@ body {
       }
     }
 
+    // Learn Section
+    .learn-section { 
+      // display: none;
+      margin-top: 250px;
+      text-align: center;
+  
+      .learn-title {
+        font-size: 32px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+  
+      .learn-descr{
+        padding-top: 15px;
+        @include flex-center-center();
+        .tutorial-text{
+          font-size: 9px;
+          text-align: center;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+    
+        .tutorial-arrow{
+          text-align: center;
+          width: 30px;
+          rotate: -90deg;
+          padding: 0 5px;
+        }
+      }
+  
+      .learn-block {
+        margin-top: 30px;
+        .learn-block_row {
+          // @include flex-between-center();
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 20px;
+          // flex-direction: column;
+  
+          .learn-block_card {
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            background: #e1e3ee;
+            padding: 10px;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            -moz-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+  
+            img {
+              width: 30px;
+            }
+  
+            .learn-block_card_title {
+              padding-top: 10px;
+              font-size: 14px;
+            }
+  
+            .learn-block_card_subtitle {
+              padding-top: 10px;
+              color: var(--color-text-grey);
+            }
+          }
+        }
+      }
+    }
+
     // Episodes Section
     .episodes-section {
       // display: none !important;
-      margin-top: 600px;
+      margin-top: 300px;
       padding-bottom: 500px;
       @include flex-center-center();
       flex-direction: column;
@@ -2020,193 +2090,132 @@ body {
       }
 
       .seasons_series {
-        @include flex-center-center();
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+        position: relative;
         flex-direction: column;
 
-        .seasons_series_all {
-          position: relative;
-          height: calc(var(--index) * 30);
-          padding: 69px 35px 13px 35px;
-          transition: 0.3s ease;
-          width: 100%;
+        .seasons_series_all_logo {
+          margin-top: 30px;
+        }
 
-          .seasons_series_all_logo {
-            opacity: 0.7;
+        .seasons_series_all_title {
+          color: var(--color-text-white);
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          transition: 0.3s ease;
+          opacity: 0;
+          text-align: center;
+          text-wrap: nowrap;
+          margin-top: 250px;
+          text-transform: uppercase;
+        }
+
+        .seasons_series_all_paragraph {
+          text-align: center;
+          color: var(--color-text-white);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          // padding: 10px 20px 20px 20px;
+          transition: 0.3s ease;
+          opacity: 0;
+          padding: 15px 20px;
+          -webkit-text-stroke: 0.2px var(--color-text-black);
+        }
+
+        .seasons_series_all_play {
+          color: var(--color-text-white);
+          background: var(--color-text-accent);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          cursor: pointer;
+          text-wrap: nowrap;
+          padding: 10px 40px;
+          border-radius: 50px;
+          border: 1px solid transparent;
+
+          text-transform: uppercase;
+          transition: 0.3s ease;
+        }
+
+        .seasons_series_all_number {
+          color: var(--color-text-grey);
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          transition: 0.3s ease;
+          position: absolute;
+          left: 50%;
+          bottom: 5%;
+          transform: translateX(-50%);
+        }
+
+        .seasons_series_all_preview {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .seasons_series_all_preview_lock {
+            margin: 20px 0;
           }
 
+          .seasons_series_all_preview_line {
+            width: -15px;
+            display: none;
+          }
+        }
+
+        .locked_seasons {
+          width: 100%;
+          height: calc(100vh / 4);
+          transition: 0.3s ease;
+          position: relative;
+
           &:hover {
-            width: 100%;
-
-            .seasons_series_all_title {
-              opacity: 1;
-            }
-
-            .seasons_series_all_paragraph {
-              opacity: 1;
-            }
-
-            .seasons_series_all_play {
-              opacity: 1;
-            }
+            height: calc(100vh / 3);
 
             .seasons_series_all_number {
               color: var(--color-text-white);
             }
-
-            .seasons_series_all_hr1 {
-              opacity: 0;
-            }
-
-            .seasons_series_all_hr2 {
-              opacity: 0;
-            }
           }
 
-          .seasons_series_all_preview {
-            position: absolute;
-            left: 50%;
-            top: 55%;
-            transform: translate(-55%, -50%);
-            // transform: translateY(-15%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .seasons_series_all_preview_lock {
-              margin: 20px 0;
-            }
-
-            .seasons_series_all_preview_line {
-              display: none !important;
-              width: -10px;
-            }
-          }
-
-          .seasons_series_all_title {
-            color: var(--color-text-white);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            // margin-top: calc(var(--index) * 45);
-            transition: 0.3s ease;
+          .seasons-content {
             opacity: 0;
-            position: absolute;
-            top: calc(var(--index) * 45);
-            left: 50%;
-            transform: translateX(-50%);
-            text-wrap: nowrap;
-
-            @media only screen and (max-width: 390px) {
-              top: calc(var(--index) * 35);
-            }
-          }
-
-          .seasons_series_all_paragraph {
-            color: var(--color-text-white);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 130%;
-            padding: 7px 30px 0px 30px;
             transition: 0.3s ease;
-            opacity: 0;
-            width: 380px;
-            -webkit-text-stroke: 0.2px var(--color-text-black);
-
-            position: absolute;
-            top: calc(var(--index) * 50);
-            left: 50%;
-            transform: translateX(-50%);
-
-            @media only screen and (max-width: 390px) {
-              top: calc(var(--index) * 42);
-            }
-          }
-
-          .seasons_series_all_play {
-            color: var(--color-text-white);
-            background: var(--color-text-accent);
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            cursor: pointer;
-            text-wrap: nowrap;
-            padding: 10px 40px;
-            border-radius: 50px;
-            border: 1px solid transparent;
-
-            text-transform: uppercase;
-            transition: 0.3s ease;
-            position: absolute;
-            top: calc(var(--index) * 71);
-            left: 50%;
-            transform: translateX(-50%);
-
-            @media only screen and (max-width: 390px) {
-              top: calc(var(--index) * 69);
-            }
-          }
-
-          .seasons_series_all_number {
-            color: var(--color-text-grey);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            transition: 0.3s ease;
-            position: absolute;
-            left: 50%;
-            bottom: 5%;
-            transform: translateX(-50%);
-          }
-
-          .seasons_series_all_logo {
-            position: absolute;
-            top: calc(var(--index) * 4);
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-
-        .seasons_series_all_active {
-          transition: 0.4s ease;
-
-          &:hover {
-            .seasons_series_all_preview {
-              opacity: 0;
-            }
           }
         }
 
         .seasons_series_1 {
-          // background: #9e9e9e;
+          width: 100%;
+          transition: 0.3s ease;
           background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/1.jpg);
           background-size: cover;
           background-repeat: no-repeat;
           background-blend-mode: darken;
-          width: 100%;
-          height: calc(var(--index) * 87);
+          height: calc(100vh / 1.5);
+          position: relative;
 
-          .seasons_series_all_logo {
-            opacity: 1;
+          &:hover {
+            .seasons_series_all_number {
+              color: var(--color-text-white);
+            }
           }
 
-          .seasons_series_all_title {
-            opacity: 1;
-          }
-
-          .seasons_series_all_paragraph {
-            opacity: 1;
-          }
-
-          .seasons_series_all_play {
-            opacity: 1;
-          }
-
-          .seasons_series_all_number {
+          .seasons-content {
             opacity: 1;
           }
 
@@ -2216,7 +2225,6 @@ body {
         }
 
         .seasons_series_2 {
-          // background: #8b8b8b;
           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/2.jpg);
           background-size: cover;
           background-repeat: no-repeat;
@@ -2228,7 +2236,6 @@ body {
         }
 
         .seasons_series_3 {
-          // background: #777777;
           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/3.jpg);
           background-size: cover;
           background-repeat: no-repeat;
@@ -2239,7 +2246,6 @@ body {
         }
 
         .seasons_series_4 {
-          // background: #6b6b6b;
           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/4.jpg);
           background-size: cover;
           background-repeat: no-repeat;
@@ -2250,128 +2256,130 @@ body {
         }
 
         .seasons_series_5 {
-          // background: #5e5e5e;
           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/1.jpg);
           background-size: cover;
           background-repeat: no-repeat;
+          &:hover {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/1.jpg);
+          }
         }
       }
     }
 
     // Reviews Section
-    .reviews-section {
-      display: none !important;
-      overflow-x: hidden;
-      // display: none !important;
-      background: var(--color-text-black);
-      padding-top: 700px;
-      padding: 50px 0 calc(var(--index) * 50) 0;
-      display: flex;
-      position: relative;
-      width: 100%;
+    // .reviews-section {
+    //   display: none !important;
+    //   overflow-x: hidden;
+    //   // display: none !important;
+    //   background: var(--color-text-black);
+    //   padding-top: 700px;
+    //   padding: 50px 0 calc(var(--index) * 50) 0;
+    //   display: flex;
+    //   position: relative;
+    //   width: 100%;
 
-      .reviews_article {
-        padding-left: 0px;
-        text-align: center;
-        width: 100%;
-        padding-top: 150px;
+    //   .reviews_article {
+    //     padding-left: 0px;
+    //     text-align: center;
+    //     width: 100%;
+    //     padding-top: 150px;
 
-        .reviews-article_title {
-          color: var(--color-text-white);
-          font-size: 32px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          max-width: 604px;
-        }
+    //     .reviews-article_title {
+    //       color: var(--color-text-white);
+    //       font-size: 32px;
+    //       font-style: normal;
+    //       font-weight: 600;
+    //       line-height: normal;
+    //       max-width: 604px;
+    //     }
 
-        .reviews-article_paragraph {
-          color: var(--color-text-grey);
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-          padding: 40px 30px 0px 30px;
-          margin-bottom: 80px;
-          max-width: 575px;
-        }
+    //     .reviews-article_paragraph {
+    //       color: var(--color-text-grey);
+    //       font-size: 14px;
+    //       font-style: normal;
+    //       font-weight: 300;
+    //       line-height: normal;
+    //       padding: 40px 30px 0px 30px;
+    //       margin-bottom: 80px;
+    //       max-width: 575px;
+    //     }
 
-        .reviews-article_button {
-          color: var(--color-button-lightgrey);
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          text-transform: uppercase;
-          border-radius: 44px;
-          background: var(--color-text-accent);
-          box-shadow: 0px 4px 4px 0px #8b33fda4;
-          padding: 20px 66px;
-        }
-      }
+    //     .reviews-article_button {
+    //       color: var(--color-button-lightgrey);
+    //       font-size: 15px;
+    //       font-style: normal;
+    //       font-weight: 700;
+    //       line-height: normal;
+    //       text-transform: uppercase;
+    //       border-radius: 44px;
+    //       background: var(--color-text-accent);
+    //       box-shadow: 0px 4px 4px 0px #8b33fda4;
+    //       padding: 20px 66px;
+    //     }
+    //   }
 
-      .reviews_comments {
-        display: flex;
-        position: absolute;
-        left: calc(var(--index) * 130);
+    //   .reviews_comments {
+    //     display: flex;
+    //     position: absolute;
+    //     left: calc(var(--index) * 130);
 
-        .reviews-comments_comment {
-          padding: 30px 28px;
-          width: 320px;
-          height: 100%;
-          border-radius: 10px;
-          background: #e4e6ef;
-          filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-          margin-right: 250px;
+    //     .reviews-comments_comment {
+    //       padding: 30px 28px;
+    //       width: 320px;
+    //       height: 100%;
+    //       border-radius: 10px;
+    //       background: #e4e6ef;
+    //       filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
+    //       margin-right: 250px;
 
-          &:first-child {
-            // margin-left: 300px;
-          }
+    //       &:first-child {
+    //         // margin-left: 300px;
+    //       }
 
-          &:nth-child(2n) {
-            margin-top: 100px;
-          }
+    //       &:nth-child(2n) {
+    //         margin-top: 100px;
+    //       }
 
-          .reviews-comments_video {
-            border-radius: 10px;
-            background: #d9d9d9;
-            width: 100%;
-            height: 135px;
-          }
+    //       .reviews-comments_video {
+    //         border-radius: 10px;
+    //         background: #d9d9d9;
+    //         width: 100%;
+    //         height: 135px;
+    //       }
 
-          .reviews-comments_rating {
-            padding-top: 10px;
-          }
+    //       .reviews-comments_rating {
+    //         padding-top: 10px;
+    //       }
 
-          .reviews-comments_title {
-            color: var(--color-text-black);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            padding-top: 20px;
-          }
+    //       .reviews-comments_title {
+    //         color: var(--color-text-black);
+    //         font-size: 32px;
+    //         font-style: normal;
+    //         font-weight: 500;
+    //         line-height: normal;
+    //         padding-top: 20px;
+    //       }
 
-          .reviews-comments_paragraph {
-            color: var(--color-text-grey);
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            padding-top: 20px;
-          }
+    //       .reviews-comments_paragraph {
+    //         color: var(--color-text-grey);
+    //         font-size: 24px;
+    //         font-style: normal;
+    //         font-weight: 300;
+    //         line-height: normal;
+    //         padding-top: 20px;
+    //       }
 
-          .reviews-comments_date {
-            color: var(--color-text-grey);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            padding-top: 20px;
-          }
-        }
-      }
-    }
+    //       .reviews-comments_date {
+    //         color: var(--color-text-grey);
+    //         font-size: 14px;
+    //         font-style: normal;
+    //         font-weight: 300;
+    //         line-height: normal;
+    //         padding-top: 20px;
+    //       }
+    //     }
+    //   }
+    // }
 
     // Join Us Section
     .join-section {
@@ -2986,6 +2994,76 @@ body {
       }
     }
 
+    // Learn Section
+    .learn-section { 
+      // display: none;
+      margin-top: 250px;
+      text-align: center;
+  
+      .learn-title {
+        font-size: 32px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+  
+      .learn-descr{
+        padding-top: 15px;
+        @include flex-center-center();
+        .tutorial-text{
+          font-size: 10px;
+          text-align: center;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+    
+        .tutorial-arrow{
+          text-align: center;
+          width: 30px;
+          rotate: -90deg;
+          padding: 0 5px;
+        }
+      }
+  
+      .learn-block {
+        margin-top: 40px;
+        .learn-block_row {
+          // @include flex-between-center();
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 20px;
+          // flex-direction: column;
+  
+          .learn-block_card {
+            text-align: center;
+            width: 120px;
+            height: 120px;
+            background: #e1e3ee;
+            padding: 10px;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            -moz-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+  
+            img {
+              width: 40px;
+            }
+  
+            .learn-block_card_title {
+              padding-top: 10px;
+              font-size: 16px;
+            }
+  
+            .learn-block_card_subtitle {
+              padding-top: 10px;
+              color: var(--color-text-grey);
+            }
+          }
+        }
+      }
+    }
+
     // Episodes Section
     .episodes-section {
       // display: none !important;
@@ -3289,118 +3367,118 @@ body {
     }
 
     // Reviews Section
-    .reviews-section {
-      overflow-x: hidden;
-      display: none !important;
-      background: var(--color-text-black);
-      padding-top: 700px;
-      padding: 50px 0 calc(var(--index) * 50) 0;
-      display: flex;
-      position: relative;
-      width: 100%;
+    // .reviews-section {
+    //   overflow-x: hidden;
+    //   display: none !important;
+    //   background: var(--color-text-black);
+    //   padding-top: 700px;
+    //   padding: 50px 0 calc(var(--index) * 50) 0;
+    //   display: flex;
+    //   position: relative;
+    //   width: 100%;
 
-      .reviews_article {
-        padding-left: 0px;
-        text-align: center;
-        width: 100%;
-        padding-top: 150px;
+    //   .reviews_article {
+    //     padding-left: 0px;
+    //     text-align: center;
+    //     width: 100%;
+    //     padding-top: 150px;
 
-        .reviews-article_title {
-          color: var(--color-text-white);
-          font-size: 44px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          max-width: 604px;
-        }
+    //     .reviews-article_title {
+    //       color: var(--color-text-white);
+    //       font-size: 44px;
+    //       font-style: normal;
+    //       font-weight: 600;
+    //       line-height: normal;
+    //       max-width: 604px;
+    //     }
 
-        .reviews-article_paragraph {
-          color: var(--color-text-grey);
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-          padding: 40px 30px 0px 30px;
-          margin-bottom: 80px;
-          max-width: 575px;
-        }
+    //     .reviews-article_paragraph {
+    //       color: var(--color-text-grey);
+    //       font-size: 16px;
+    //       font-style: normal;
+    //       font-weight: 300;
+    //       line-height: normal;
+    //       padding: 40px 30px 0px 30px;
+    //       margin-bottom: 80px;
+    //       max-width: 575px;
+    //     }
 
-        .reviews-article_button {
-          color: var(--color-button-lightgrey);
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          text-transform: uppercase;
-          border-radius: 44px;
-          background: var(--color-text-accent);
-          box-shadow: 0px 4px 4px 0px #8b33fda4;
-          padding: 20px 66px;
-        }
-      }
+    //     .reviews-article_button {
+    //       color: var(--color-button-lightgrey);
+    //       font-size: 15px;
+    //       font-style: normal;
+    //       font-weight: 700;
+    //       line-height: normal;
+    //       text-transform: uppercase;
+    //       border-radius: 44px;
+    //       background: var(--color-text-accent);
+    //       box-shadow: 0px 4px 4px 0px #8b33fda4;
+    //       padding: 20px 66px;
+    //     }
+    //   }
 
-      .reviews_comments {
-        display: flex;
-        position: absolute;
-        left: calc(var(--index) * 130);
+    //   .reviews_comments {
+    //     display: flex;
+    //     position: absolute;
+    //     left: calc(var(--index) * 130);
 
-        .reviews-comments_comment {
-          padding: 30px 28px;
-          width: 320px;
-          height: 100%;
-          border-radius: 10px;
-          background: #e4e6ef;
-          filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-          margin-right: 250px;
+    //     .reviews-comments_comment {
+    //       padding: 30px 28px;
+    //       width: 320px;
+    //       height: 100%;
+    //       border-radius: 10px;
+    //       background: #e4e6ef;
+    //       filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
+    //       margin-right: 250px;
 
-          &:first-child {
-            // margin-left: 300px;
-          }
+    //       &:first-child {
+    //         // margin-left: 300px;
+    //       }
 
-          &:nth-child(2n) {
-            margin-top: 100px;
-          }
+    //       &:nth-child(2n) {
+    //         margin-top: 100px;
+    //       }
 
-          .reviews-comments_video {
-            border-radius: 10px;
-            background: #d9d9d9;
-            width: 100%;
-            height: 135px;
-          }
+    //       .reviews-comments_video {
+    //         border-radius: 10px;
+    //         background: #d9d9d9;
+    //         width: 100%;
+    //         height: 135px;
+    //       }
 
-          .reviews-comments_rating {
-            padding-top: 10px;
-          }
+    //       .reviews-comments_rating {
+    //         padding-top: 10px;
+    //       }
 
-          .reviews-comments_title {
-            color: var(--color-text-black);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            padding-top: 20px;
-          }
+    //       .reviews-comments_title {
+    //         color: var(--color-text-black);
+    //         font-size: 32px;
+    //         font-style: normal;
+    //         font-weight: 500;
+    //         line-height: normal;
+    //         padding-top: 20px;
+    //       }
 
-          .reviews-comments_paragraph {
-            color: var(--color-text-grey);
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            padding-top: 20px;
-          }
+    //       .reviews-comments_paragraph {
+    //         color: var(--color-text-grey);
+    //         font-size: 24px;
+    //         font-style: normal;
+    //         font-weight: 300;
+    //         line-height: normal;
+    //         padding-top: 20px;
+    //       }
 
-          .reviews-comments_date {
-            color: var(--color-text-grey);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            padding-top: 20px;
-          }
-        }
-      }
-    }
+    //       .reviews-comments_date {
+    //         color: var(--color-text-grey);
+    //         font-size: 14px;
+    //         font-style: normal;
+    //         font-weight: 300;
+    //         line-height: normal;
+    //         padding-top: 20px;
+    //       }
+    //     }
+    //   }
+    // }
 
     // Join Us Section
     .join-section {
@@ -4058,6 +4136,76 @@ body {
         height: calc(var(--index) * 40); //71
         border-radius: 20px;
         // box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    // Learn Section
+    .learn-section { 
+      // display: none;
+      margin-top: 250px;
+      text-align: center;
+  
+      .learn-title {
+        font-size: 40px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+  
+      .learn-descr{
+        padding-top: 15px;
+        @include flex-center-center();
+        .tutorial-text{
+          font-size: 12px;
+          text-align: center;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+    
+        .tutorial-arrow{
+          text-align: center;
+          width: 30px;
+          rotate: -90deg;
+          padding: 0 5px;
+        }
+      }
+  
+      .learn-block {
+        margin-top: 30px;
+        .learn-block_row {
+          // @include flex-between-center();
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 20px;
+          // flex-direction: column;
+  
+          .learn-block_card {
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background: #e1e3ee;
+            padding: 30px;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            -moz-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+  
+            img {
+              width: 50px;
+            }
+  
+            .learn-block_card_title {
+              padding-top: 10px;
+              font-size: 26px;
+            }
+  
+            .learn-block_card_subtitle {
+              padding-top: 10px;
+              color: var(--color-text-grey);
+            }
+          }
+        }
       }
     }
 
@@ -5096,6 +5244,76 @@ body {
         height: calc(var(--index) * 60); //71
         border-radius: 20px;
         // box-shadow: 0px 4px 12.5px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    // Learn Section
+    .learn-section { 
+      // display: none;
+      margin-top: 250px;
+      text-align: center;
+  
+      .learn-title {
+        font-size: 42px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+  
+      .learn-descr{
+        padding-top: 15px;
+        @include flex-center-center();
+        .tutorial-text{
+          font-size: 16px;
+          text-align: center;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+    
+        .tutorial-arrow{
+          text-align: center;
+          width: 30px;
+          rotate: -90deg;
+          padding: 0 5px;
+        }
+      }
+  
+      .learn-block {
+        margin-top: 30px;
+        .learn-block_row {
+          // @include flex-between-center();
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 20px;
+          // flex-direction: column;
+  
+          .learn-block_card {
+            text-align: center;
+            width: 260px;
+            height: 240px;
+            background: #e1e3ee;
+            padding: 50px;
+            border-radius: 20px;
+            -webkit-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            -moz-box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+            box-shadow: 0px 15px 31px -11px rgba(224, 224, 224, 1);
+  
+            img {
+              width: 50px;
+            }
+  
+            .learn-block_card_title {
+              padding-top: 10px;
+              font-size: 28px;
+            }
+  
+            .learn-block_card_subtitle {
+              padding-top: 10px;
+              color: var(--color-text-grey);
+            }
+          }
+        }
       }
     }
 
@@ -6827,587 +7045,587 @@ body {
   }
 }
 
-@media only screen and (min-width: 1500px) {
-  .m-header {
-    .header-navigation {
-      .navigation_right {
-        .navigation-right__music-button {
-          margin-right: 40px;
-        }
-
-        .navigation {
-          .navigation__button {
-            top: calc(var(--index) * 1.2);
-          }
-
-          .navigation__background {
-            top: calc(var(--index) * 1.3);
-          }
-
-          .navigation__icon {
-            margin-top: calc(var(--index) * 0.3);
-            margin-right: calc(var(--index) * -1.6);
-          }
-        }
-      }
-    }
-  }
-  .m-main {
-    // TEST
-
-    // Hero Section
-    .hero-section {
-      .hero_title {
-        font-size: 51px;
-      }
-
-      .hero_scrolldown {
-        padding-top: 15px;
-        padding-bottom: calc(var(--index) * 15);
-      }
-    }
-
-    // Problems Section
-    .problems-section {
-    }
-
-    // Timeline Section
-    .timeline-section {
-      .timeline_graph {
-        @include flex-center-center();
-        margin-top: 100px;
-
-        .timeline {
-          .timeline_section {
-            .timeline_content {
-              display: flex;
-              // justify-content: space-around;
-              opacity: 0;
-              position: relative;
-              z-index: 10;
-
-              border-radius: 20px;
-
-              .content_section {
-                width: 400px;
-                background: var(--color-text-black);
-                padding: 20px;
-                border-radius: 20px;
-                height: calc(var(--index) * 40);
-
-                &:not(:last-child) {
-                  margin-right: 50px;
-                }
-
-                .content-mult_title {
-                  color: var(--color-text-black);
-                  transition: 0.6s ease;
-                  font-size: 30px;
-                  background-color: var(--color-text-white);
-                  text-align: center;
-                  text-transform: uppercase;
-                  border-radius: 20px;
-                  padding: 5px 0;
-                }
-
-                .timeline_paragraph {
-                  text-align: start;
-                  color: var(--color-text-white);
-                  font-size: 16px;
-                  padding-top: 30px;
-                  // padding: 20px 10px;
-                  // background: rgba(38, 38, 38, 0.74);
-                  // border-radius: 16px;
-                  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                  // backdrop-filter: blur(5px);
-                  // -webkit-backdrop-filter: blur(5px);
-                  // border: 1px solid rgba(38, 38, 38, 0.35);
-                  // border-radius: 15px;
-
-                  // height: calc(var(--index) * 20);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    // Seasons Section
-    .seasons-section {
-      position: relative;
-      z-index: 10;
-      background: var(--color-text-black);
-
-      .seasons_title {
-        text-align: center;
-        color: var(--color-text-white);
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        position: relative;
-        padding: 36px;
-
-        &::before {
-          display: block;
-          width: 430px;
-          content: "";
-          position: absolute;
-          border-bottom: 1px solid var(--color-text-white);
-          top: 50%;
-          right: calc(var(--index) * 5);
-          border-radius: 100%;
-        }
-
-        &::after {
-          display: block;
-          width: 430px;
-          content: "";
-          position: absolute;
-          border-bottom: 1px solid var(--color-text-white);
-          top: 50%;
-          left: calc(var(--index) * 5);
-          border-radius: 100%;
-        }
-      }
-
-      .seasons_series {
-        @include flex-center-center();
-
-        .seasons_series_all {
-          position: relative;
-          height: calc(var(--index) * 87);
-          padding: 69px 65px 13px 65px;
-          transition: 0.3s ease;
-          width: calc(100vw / 4);
-
-          &:hover {
-            width: calc(100vw / 3);
-
-            .seasons_series_all_title {
-              opacity: 1;
-            }
-
-            .seasons_series_all_paragraph {
-              opacity: 1;
-            }
-
-            .seasons_series_all_play {
-              opacity: 1;
-            }
-
-            .seasons_series_all_number {
-              color: var(--color-text-white);
-            }
-
-            .seasons_series_all_hr1 {
-              opacity: 0;
-            }
-
-            .seasons_series_all_hr2 {
-              opacity: 0;
-            }
-          }
-
-          .seasons_series_all_preview {
-            position: absolute;
-            left: 50%;
-            top: 15%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .seasons_series_all_preview_lock {
-              margin: 20px 0;
-            }
-
-            // .seasons_series_all_preview_line {
-            //   width: calc(var(--index) * -0.9);
-            // }
-          }
-
-          .seasons_series_all_title {
-            color: var(--color-text-white);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            // margin-top: calc(var(--index) * 45);
-            transition: 0.3s ease;
-            opacity: 0;
-            position: absolute;
-            top: calc(var(--index) * 50);
-            left: 50%;
-            transform: translateX(-50%);
-            text-wrap: nowrap;
-          }
-
-          .seasons_series_all_paragraph {
-            color: #d9d9d9;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 130%;
-            padding-top: 7px;
-            transition: 0.3s ease;
-            opacity: 0;
-            width: 300px;
-
-            position: absolute;
-            top: calc(var(--index) * 55);
-            left: 50%;
-            transform: translateX(-50%);
-          }
-
-          .seasons_series_all_play {
-            color: var(--color-text-white);
-            background: var(--color-text-accent);
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-            cursor: pointer;
-            text-wrap: nowrap;
-            padding: 10px 40px;
-            border-radius: 50px;
-            border: 1px solid transparent;
-
-            text-transform: uppercase;
-            transition: 0.3s ease;
-            position: absolute;
-            top: calc(var(--index) * 72);
-            left: 50%;
-            transform: translateX(-50%);
-
-            &:hover {
-            }
-          }
-
-          .seasons_series_all_number {
-            color: var(--color-text-grey);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            transition: 0.3s ease;
-            position: absolute;
-            left: 50%;
-            bottom: 5%;
-            transform: translateX(-50%);
-          }
-
-          .seasons_series_all_logo {
-            position: absolute;
-            top: calc(var(--index) * 4);
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-
-        .seasons_series_all_active {
-          transition: 0.4s ease;
-
-          &:hover {
-            .seasons_series_all_preview {
-              opacity: 0;
-            }
-          }
-        }
-
-        .seasons_series_1 {
-          // background: #9e9e9e;
-          background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../media/img/episodes_preview/1.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-blend-mode: darken;
-          width: calc(100vw / 3);
-
-          .seasons_series_all_title {
-            opacity: 1;
-          }
-
-          .seasons_series_all_paragraph {
-            opacity: 1;
-          }
-
-          .seasons_series_all_play {
-            opacity: 1;
-          }
-
-          .seasons_series_all_number {
-            opacity: 1;
-          }
-
-          .seasons_series_all_preview {
-            opacity: 0;
-          }
-        }
-
-        .seasons_series_2 {
-          // background: #8b8b8b;
-          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/2.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          transition: 0.3s ease;
-
-          &:hover {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/2.jpg);
-          }
-        }
-
-        .seasons_series_3 {
-          // background: #777777;
-          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/3.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-
-          &:hover {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/3.jpg);
-          }
-        }
-
-        .seasons_series_4 {
-          // background: #6b6b6b;
-          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/4.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-
-          &:hover {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/4.jpg);
-          }
-        }
-
-        .seasons_series_5 {
-          // background: #5e5e5e;
-          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/1.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
-      }
-    }
-
-    // Reviews Section
-    .reviews-section {
-      background: var(--color-text-black);
-      padding-top: 700px;
-      padding: 195px 0 calc(var(--index) * 50) 0;
-      display: flex;
-      position: relative;
-      width: 260%;
-
-      .reviews_article {
-        padding-left: 100px;
-        width: 704px;
-
-        .reviews-article_title {
-          color: var(--color-text-white);
-          font-size: 64px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          max-width: 604px;
-        }
-
-        .reviews-article_paragraph {
-          color: var(--color-text-grey);
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: normal;
-          padding-top: 40px;
-          margin-bottom: 80px;
-          max-width: 575px;
-        }
-
-        .reviews-article_button {
-          color: var(--color-button-lightgrey);
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          text-transform: uppercase;
-          border-radius: 44px;
-          background: var(--color-text-accent);
-          box-shadow: 0px 4px 4px 0px #8b33fda4;
-          padding: 20px 66px;
-        }
-      }
-
-      .reviews_comments {
-        display: flex;
-        position: absolute;
-        left: calc(var(--index) * 190);
-
-        .reviews-comments_comment {
-          padding: 30px 28px;
-          width: 455px;
-          height: 550px;
-          border-radius: 10px;
-          background: #e4e6ef;
-          filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
-          margin-right: 250px;
-
-          &:first-child {
-            // margin-left: 300px;
-          }
-
-          &:nth-child(2n) {
-            margin-top: 100px;
-          }
-
-          .reviews-comments_video {
-            border-radius: 10px;
-            background: #d9d9d9;
-            width: 399px;
-            height: 195px;
-          }
-
-          .reviews-comments_rating {
-            padding-top: 10px;
-          }
-
-          .reviews-comments_title {
-            color: var(--color-text-black);
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            padding-top: 20px;
-          }
-
-          .reviews-comments_paragraph {
-            color: var(--color-text-grey);
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            padding-top: 20px;
-          }
-
-          .reviews-comments_date {
-            color: var(--color-text-grey);
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            padding-top: 20px;
-          }
-        }
-      }
-    }
-
-    // Join Us Section
-    .join-section {
-      .join_title {
-        text-align: center;
-        color: var(--color-text-black);
-        font-size: 70px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-transform: uppercase;
-      }
-
-      .join_cards {
-        @include flex-between-center();
-        margin-top: 50px;
-
-        .join-cards_card {
-          background: var(--color-text-black);
-          width: calc(var(--index) * 40);
-          height: 600px;
-          padding: 30px;
-          border-radius: 20px;
-          position: relative;
-
-          &:first-child {
-            .join-cards_card-name {
-              font-size: calc(var(--index) * 4.9);
-            }
-          }
-
-          .join-cards_card-top {
-            @include flex-between-center();
-
-            .join-cards_card-top_plan {
-              font-size: 12px;
-              background: var(--color-text-white);
-              color: var(--color-text-black);
-              padding: 11px 20px;
-              border-radius: 20px;
-            }
-            .join-cards_card-top_plan-descr {
-              color: var(--color-text-grey);
-              font-size: 12px;
-            }
-          }
-
-          .join-cards_card-name {
-            color: #313131;
-            font-size: calc(var(--index) * 4.5);
-            font-weight: 700;
-            text-wrap: nowrap;
-            position: absolute;
-            z-index: 1;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 130px;
-          }
-          .join-cards_card-price {
-            font-size: 64px;
-            color: var(--color-text-white);
-            font-weight: 500;
-            position: relative;
-            z-index: 2;
-            margin-top: 100px;
-
-            span {
-              font-size: 20px;
-              font-weight: 300;
-            }
-          }
-
-          .join-cards_card-advantages {
-            margin-top: 20px;
-
-            .join-cards_card-advantages-advantage {
-              display: flex;
-              align-items: center;
-              font-size: 16px;
-              font-weight: 300;
-              color: var(--color-text-white);
-
-              &:not(:last-child) {
-                margin-bottom: 15px;
-              }
-
-              span {
-                margin-right: 5px;
-              }
-            }
-
-            .advantage-tick {
-              text-decoration: underline;
-            }
-          }
-
-          .join-cards_card-button {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 20px 130px;
-            bottom: 40px;
-            background: var(--color-text-white);
-            color: var(--color-text-black);
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 50px;
-          }
-        }
-      }
-    }
-  }
-}
+// @media only screen and (min-width: 1500px) {
+//   .m-header {
+//     .header-navigation {
+//       .navigation_right {
+//         .navigation-right__music-button {
+//           margin-right: 40px;
+//         }
+
+//         .navigation {
+//           .navigation__button {
+//             top: calc(var(--index) * 1.2);
+//           }
+
+//           .navigation__background {
+//             top: calc(var(--index) * 1.3);
+//           }
+
+//           .navigation__icon {
+//             margin-top: calc(var(--index) * 0.3);
+//             margin-right: calc(var(--index) * -1.6);
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .m-main {
+//     // TEST
+
+//     // Hero Section
+//     .hero-section {
+//       .hero_title {
+//         font-size: 51px;
+//       }
+
+//       .hero_scrolldown {
+//         padding-top: 15px;
+//         padding-bottom: calc(var(--index) * 15);
+//       }
+//     }
+
+//     // Problems Section
+//     .problems-section {
+//     }
+
+//     // Timeline Section
+//     .timeline-section {
+//       .timeline_graph {
+//         @include flex-center-center();
+//         margin-top: 100px;
+
+//         .timeline {
+//           .timeline_section {
+//             .timeline_content {
+//               display: flex;
+//               // justify-content: space-around;
+//               opacity: 0;
+//               position: relative;
+//               z-index: 10;
+
+//               border-radius: 20px;
+
+//               .content_section {
+//                 width: 400px;
+//                 background: var(--color-text-black);
+//                 padding: 20px;
+//                 border-radius: 20px;
+//                 height: calc(var(--index) * 40);
+
+//                 &:not(:last-child) {
+//                   margin-right: 50px;
+//                 }
+
+//                 .content-mult_title {
+//                   color: var(--color-text-black);
+//                   transition: 0.6s ease;
+//                   font-size: 30px;
+//                   background-color: var(--color-text-white);
+//                   text-align: center;
+//                   text-transform: uppercase;
+//                   border-radius: 20px;
+//                   padding: 5px 0;
+//                 }
+
+//                 .timeline_paragraph {
+//                   text-align: start;
+//                   color: var(--color-text-white);
+//                   font-size: 16px;
+//                   padding-top: 30px;
+//                   // padding: 20px 10px;
+//                   // background: rgba(38, 38, 38, 0.74);
+//                   // border-radius: 16px;
+//                   // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+//                   // backdrop-filter: blur(5px);
+//                   // -webkit-backdrop-filter: blur(5px);
+//                   // border: 1px solid rgba(38, 38, 38, 0.35);
+//                   // border-radius: 15px;
+
+//                   // height: calc(var(--index) * 20);
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     // Seasons Section
+//     .seasons-section {
+//       position: relative;
+//       z-index: 10;
+//       background: var(--color-text-black);
+
+//       .seasons_title {
+//         text-align: center;
+//         color: var(--color-text-white);
+//         font-size: 32px;
+//         font-style: normal;
+//         font-weight: 600;
+//         line-height: normal;
+//         position: relative;
+//         padding: 36px;
+
+//         &::before {
+//           display: block;
+//           width: 430px;
+//           content: "";
+//           position: absolute;
+//           border-bottom: 1px solid var(--color-text-white);
+//           top: 50%;
+//           right: calc(var(--index) * 5);
+//           border-radius: 100%;
+//         }
+
+//         &::after {
+//           display: block;
+//           width: 430px;
+//           content: "";
+//           position: absolute;
+//           border-bottom: 1px solid var(--color-text-white);
+//           top: 50%;
+//           left: calc(var(--index) * 5);
+//           border-radius: 100%;
+//         }
+//       }
+
+//       .seasons_series {
+//         @include flex-center-center();
+
+//         .seasons_series_all {
+//           position: relative;
+//           height: calc(var(--index) * 87);
+//           padding: 69px 65px 13px 65px;
+//           transition: 0.3s ease;
+//           width: calc(100vw / 4);
+
+//           &:hover {
+//             width: calc(100vw / 3);
+
+//             .seasons_series_all_title {
+//               opacity: 1;
+//             }
+
+//             .seasons_series_all_paragraph {
+//               opacity: 1;
+//             }
+
+//             .seasons_series_all_play {
+//               opacity: 1;
+//             }
+
+//             .seasons_series_all_number {
+//               color: var(--color-text-white);
+//             }
+
+//             .seasons_series_all_hr1 {
+//               opacity: 0;
+//             }
+
+//             .seasons_series_all_hr2 {
+//               opacity: 0;
+//             }
+//           }
+
+//           .seasons_series_all_preview {
+//             position: absolute;
+//             left: 50%;
+//             top: 15%;
+//             transform: translateX(-50%);
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: center;
+
+//             .seasons_series_all_preview_lock {
+//               margin: 20px 0;
+//             }
+
+//             // .seasons_series_all_preview_line {
+//             //   width: calc(var(--index) * -0.9);
+//             // }
+//           }
+
+//           .seasons_series_all_title {
+//             color: var(--color-text-white);
+//             font-size: 32px;
+//             font-style: normal;
+//             font-weight: 500;
+//             line-height: normal;
+//             // margin-top: calc(var(--index) * 45);
+//             transition: 0.3s ease;
+//             opacity: 0;
+//             position: absolute;
+//             top: calc(var(--index) * 50);
+//             left: 50%;
+//             transform: translateX(-50%);
+//             text-wrap: nowrap;
+//           }
+
+//           .seasons_series_all_paragraph {
+//             color: #d9d9d9;
+//             font-size: 12px;
+//             font-style: normal;
+//             font-weight: 300;
+//             line-height: 130%;
+//             padding-top: 7px;
+//             transition: 0.3s ease;
+//             opacity: 0;
+//             width: 300px;
+
+//             position: absolute;
+//             top: calc(var(--index) * 55);
+//             left: 50%;
+//             transform: translateX(-50%);
+//           }
+
+//           .seasons_series_all_play {
+//             color: var(--color-text-white);
+//             background: var(--color-text-accent);
+//             font-size: 16px;
+//             font-style: normal;
+//             font-weight: 600;
+//             line-height: normal;
+//             cursor: pointer;
+//             text-wrap: nowrap;
+//             padding: 10px 40px;
+//             border-radius: 50px;
+//             border: 1px solid transparent;
+
+//             text-transform: uppercase;
+//             transition: 0.3s ease;
+//             position: absolute;
+//             top: calc(var(--index) * 72);
+//             left: 50%;
+//             transform: translateX(-50%);
+
+//             &:hover {
+//             }
+//           }
+
+//           .seasons_series_all_number {
+//             color: var(--color-text-grey);
+//             font-size: 32px;
+//             font-style: normal;
+//             font-weight: 400;
+//             line-height: normal;
+//             transition: 0.3s ease;
+//             position: absolute;
+//             left: 50%;
+//             bottom: 5%;
+//             transform: translateX(-50%);
+//           }
+
+//           .seasons_series_all_logo {
+//             position: absolute;
+//             top: calc(var(--index) * 4);
+//             left: 50%;
+//             transform: translateX(-50%);
+//           }
+//         }
+
+//         .seasons_series_all_active {
+//           transition: 0.4s ease;
+
+//           &:hover {
+//             .seasons_series_all_preview {
+//               opacity: 0;
+//             }
+//           }
+//         }
+
+//         .seasons_series_1 {
+//           // background: #9e9e9e;
+//           background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../media/img/episodes_preview/1.jpg);
+//           background-size: cover;
+//           background-repeat: no-repeat;
+//           background-blend-mode: darken;
+//           width: calc(100vw / 3);
+
+//           .seasons_series_all_title {
+//             opacity: 1;
+//           }
+
+//           .seasons_series_all_paragraph {
+//             opacity: 1;
+//           }
+
+//           .seasons_series_all_play {
+//             opacity: 1;
+//           }
+
+//           .seasons_series_all_number {
+//             opacity: 1;
+//           }
+
+//           .seasons_series_all_preview {
+//             opacity: 0;
+//           }
+//         }
+
+//         .seasons_series_2 {
+//           // background: #8b8b8b;
+//           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/2.jpg);
+//           background-size: cover;
+//           background-repeat: no-repeat;
+//           transition: 0.3s ease;
+
+//           &:hover {
+//             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/2.jpg);
+//           }
+//         }
+
+//         .seasons_series_3 {
+//           // background: #777777;
+//           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/3.jpg);
+//           background-size: cover;
+//           background-repeat: no-repeat;
+
+//           &:hover {
+//             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/3.jpg);
+//           }
+//         }
+
+//         .seasons_series_4 {
+//           // background: #6b6b6b;
+//           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/4.jpg);
+//           background-size: cover;
+//           background-repeat: no-repeat;
+
+//           &:hover {
+//             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../media/img/episodes_preview/4.jpg);
+//           }
+//         }
+
+//         .seasons_series_5 {
+//           // background: #5e5e5e;
+//           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../../media/img/episodes_preview/1.jpg);
+//           background-size: cover;
+//           background-repeat: no-repeat;
+//         }
+//       }
+//     }
+
+//     // Reviews Section
+//     .reviews-section {
+//       background: var(--color-text-black);
+//       padding-top: 700px;
+//       padding: 195px 0 calc(var(--index) * 50) 0;
+//       display: flex;
+//       position: relative;
+//       width: 260%;
+
+//       .reviews_article {
+//         padding-left: 100px;
+//         width: 704px;
+
+//         .reviews-article_title {
+//           color: var(--color-text-white);
+//           font-size: 64px;
+//           font-style: normal;
+//           font-weight: 600;
+//           line-height: normal;
+//           max-width: 604px;
+//         }
+
+//         .reviews-article_paragraph {
+//           color: var(--color-text-grey);
+//           font-size: 24px;
+//           font-style: normal;
+//           font-weight: 300;
+//           line-height: normal;
+//           padding-top: 40px;
+//           margin-bottom: 80px;
+//           max-width: 575px;
+//         }
+
+//         .reviews-article_button {
+//           color: var(--color-button-lightgrey);
+//           font-size: 15px;
+//           font-style: normal;
+//           font-weight: 700;
+//           line-height: normal;
+//           text-transform: uppercase;
+//           border-radius: 44px;
+//           background: var(--color-text-accent);
+//           box-shadow: 0px 4px 4px 0px #8b33fda4;
+//           padding: 20px 66px;
+//         }
+//       }
+
+//       .reviews_comments {
+//         display: flex;
+//         position: absolute;
+//         left: calc(var(--index) * 190);
+
+//         .reviews-comments_comment {
+//           padding: 30px 28px;
+//           width: 455px;
+//           height: 550px;
+//           border-radius: 10px;
+//           background: #e4e6ef;
+//           filter: drop-shadow(0px 4px 12.5px rgba(255, 255, 255, 0.85));
+//           margin-right: 250px;
+
+//           &:first-child {
+//             // margin-left: 300px;
+//           }
+
+//           &:nth-child(2n) {
+//             margin-top: 100px;
+//           }
+
+//           .reviews-comments_video {
+//             border-radius: 10px;
+//             background: #d9d9d9;
+//             width: 399px;
+//             height: 195px;
+//           }
+
+//           .reviews-comments_rating {
+//             padding-top: 10px;
+//           }
+
+//           .reviews-comments_title {
+//             color: var(--color-text-black);
+//             font-size: 32px;
+//             font-style: normal;
+//             font-weight: 500;
+//             line-height: normal;
+//             padding-top: 20px;
+//           }
+
+//           .reviews-comments_paragraph {
+//             color: var(--color-text-grey);
+//             font-size: 24px;
+//             font-style: normal;
+//             font-weight: 300;
+//             line-height: normal;
+//             padding-top: 20px;
+//           }
+
+//           .reviews-comments_date {
+//             color: var(--color-text-grey);
+//             font-size: 14px;
+//             font-style: normal;
+//             font-weight: 300;
+//             line-height: normal;
+//             padding-top: 20px;
+//           }
+//         }
+//       }
+//     }
+
+//     // Join Us Section
+//     .join-section {
+//       .join_title {
+//         text-align: center;
+//         color: var(--color-text-black);
+//         font-size: 70px;
+//         font-style: normal;
+//         font-weight: 600;
+//         line-height: normal;
+//         text-transform: uppercase;
+//       }
+
+//       .join_cards {
+//         @include flex-between-center();
+//         margin-top: 50px;
+
+//         .join-cards_card {
+//           background: var(--color-text-black);
+//           width: calc(var(--index) * 40);
+//           height: 600px;
+//           padding: 30px;
+//           border-radius: 20px;
+//           position: relative;
+
+//           &:first-child {
+//             .join-cards_card-name {
+//               font-size: calc(var(--index) * 4.9);
+//             }
+//           }
+
+//           .join-cards_card-top {
+//             @include flex-between-center();
+
+//             .join-cards_card-top_plan {
+//               font-size: 12px;
+//               background: var(--color-text-white);
+//               color: var(--color-text-black);
+//               padding: 11px 20px;
+//               border-radius: 20px;
+//             }
+//             .join-cards_card-top_plan-descr {
+//               color: var(--color-text-grey);
+//               font-size: 12px;
+//             }
+//           }
+
+//           .join-cards_card-name {
+//             color: #313131;
+//             font-size: calc(var(--index) * 4.5);
+//             font-weight: 700;
+//             text-wrap: nowrap;
+//             position: absolute;
+//             z-index: 1;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             top: 130px;
+//           }
+//           .join-cards_card-price {
+//             font-size: 64px;
+//             color: var(--color-text-white);
+//             font-weight: 500;
+//             position: relative;
+//             z-index: 2;
+//             margin-top: 100px;
+
+//             span {
+//               font-size: 20px;
+//               font-weight: 300;
+//             }
+//           }
+
+//           .join-cards_card-advantages {
+//             margin-top: 20px;
+
+//             .join-cards_card-advantages-advantage {
+//               display: flex;
+//               align-items: center;
+//               font-size: 16px;
+//               font-weight: 300;
+//               color: var(--color-text-white);
+
+//               &:not(:last-child) {
+//                 margin-bottom: 15px;
+//               }
+
+//               span {
+//                 margin-right: 5px;
+//               }
+//             }
+
+//             .advantage-tick {
+//               text-decoration: underline;
+//             }
+//           }
+
+//           .join-cards_card-button {
+//             position: absolute;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             padding: 20px 130px;
+//             bottom: 40px;
+//             background: var(--color-text-white);
+//             color: var(--color-text-black);
+//             font-weight: 700;
+//             text-transform: uppercase;
+//             border-radius: 50px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
